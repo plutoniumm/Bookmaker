@@ -1,0 +1,15 @@
+{
+  "name": "factorial",
+  "version": "0.0.0",
+  "description": "Supplements for Factorial",
+  "scripts": {
+    "git": "sh ./scripts/commit.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plutoniumm/Factorial.git"
+  },
+  "author": "Plutoniumm",
+  "license": "MIT",
+  "homepage": "https://factorial.nukes.in/"
+}
