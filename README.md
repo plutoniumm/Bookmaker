@@ -1,2 +1,2 @@
-# factorial
-The Factorial - A Blog :)
+# iFactorial
+The iFactorial - A Blog :)

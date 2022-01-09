@@ -1,5 +1,6 @@
-echo "Enter Message: "
+git pull;
 
+echo "Enter Message: "
 read message;
 
 git add .;

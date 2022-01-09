@@ -1,0 +1,38 @@
+// PARTICLES
+.d-u{display:unset}
+.d-n{display:none}
+
+// STANDARD
+svg{
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1px;
+}
+
+[size="icon"]{
+    width:24px;
+    height:24px;
+}
+
+// NAV
+#globalNav{
+    align-items: center;
+    padding: 0 1rem;
+    padding-top: 1rem;
+    border-bottom: 1px solid #0001;
+}
+
+#globalNav img{
+    padding-top: 2px;
+    margin-right: 7px;
+}
+
+#globalNav #nav-hero{
+    font-size: 1.5em;
+    font-weight: light;
+    color: #888;
+}
+
+#globalNav .space-btm{
+    padding-bottom: 0.75rem;
+}

@@ -1,0 +1,161 @@
+---
+permalink: /generator/
+title: Generator
+---
+
+<script id="colors-script" src="/assets/js/colors.js"></script>
+
+<svg width="300px" height="300px" viewbox="0 0 100 100 100" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+</svg>
+
+<style>
+    body {
+	 background: #131720;
+	 color: #fefefe;
+	 font: 300 1em 'Source Sans Pro', sans-serif;
+	 text-align: center;
+}
+ #canvas {
+	 display: none;
+}
+ .palette {
+     color: #000;
+	 margin: 0em auto;
+	 overflow: hidden;
+	 max-width: 100%;
+	 width: 15em;
+}
+ .hex {
+	 float: left;
+	 overflow: hidden;
+	 width: 33%;
+     font-size: 0.75em;
+     display: block;
+}
+</style>
+
+<section id="palette">
+    <canvas id="canvas"></canvas>
+    <div class="palette">
+        <div class="hex"></div>
+        <div class="hex"></div>
+        <div class="hex"></div>
+    </div>
+    <div class="palette">
+        <div class="hex"></div>
+        <div class="hex"></div>
+        <div class="hex"></div>
+    </div>
+    <div class="palette">
+        <div class="hex"></div>
+        <div class="hex"></div>
+        <div class="hex"></div>
+    </div>
+</section>
+
+<script>
+(function() {
+  "use strict";
+  let rotation = 90, baseColor, secondColor, thirdColor;
+
+  // Canvas variables
+  let canvas = document.getElementById('canvas'),
+  ctx = canvas.getContext('2d');
+
+  let canvasWidth = canvas.width = 80,
+    canvasHeight = canvas.height = 80;
+
+  // Now generate the three main colors of the palette
+  let setColors = function(newPalette) {
+    if (newPalette) { baseColor = new Color();}
+
+    secondColor = new Color(
+      baseColor.changeHue(baseColor.hue, rotation),
+      baseColor.sat,
+      baseColor.changeLight(baseColor.light));
+
+    thirdColor = new Color(
+      baseColor.changeHue(baseColor.hue, rotation + rotation),
+      baseColor.sat,
+      baseColor.changeLight(baseColor.light));
+  };
+
+  // Draw colors on canvas
+  let drawColor = function(x, y, width, height, color, blendMode, alpha) {
+    ctx.save();
+    ctx.beginPath();
+    ctx.fillStyle = color;
+    ctx.globalAlpha = alpha || 1;
+    ctx.globalCompositeOperation = blendMode || 'source-over';
+    ctx.rect(x, y, width, height);
+    ctx.fill();
+    ctx.closePath();
+    ctx.restore();
+  };
+
+  // Draw the canvas
+  let drawCanvas = function() {
+    // Top color
+    drawColor(0, 0, canvasWidth, canvasHeight, baseColor.hsl);
+    // Middle color
+    drawColor(0, canvasHeight / 3, canvasWidth, canvasHeight, secondColor.hsl);
+    // Bottom color
+    drawColor(0, canvasHeight / 3 + canvasHeight / 3, canvasWidth, canvasHeight, thirdColor.hsl);
+    // Left color overlay (lightens with yellow)
+    drawColor(0, 0, canvasWidth / 3, canvasHeight, '#fcd108', 'screen', 0.75);
+    // Right color overlay (darkens with blue)
+    drawColor(canvasWidth / 3 + canvasWidth / 3, 0, canvasWidth / 3, canvasHeight, '#094078', 'overlay');
+    // Full color overlays (creates a cast over all colors for a more uniform, moderated look)
+    drawColor(0, 0, canvasWidth, canvasHeight, '#ffcc00', 'overlay', 0.25);
+    drawColor(0, 0, canvasWidth, canvasHeight, '#f13a6d', 'lighten', 0.25);
+    drawColor(0, 0, canvasWidth, canvasHeight, '#092559', 'screen', 0.5);
+  };
+
+  // Pick a color from canvas
+  let getColor = function(x, y) {
+    let rgba = ctx.getImageData(x, y, 1, 1).data;
+    rgba[3] = 1; // set alpha channel from 255 to 1
+
+    return rgba;
+  };
+
+  // Change text color of HTML element
+  let changeElementColor = function(element, color) {
+    document.querySelector(element).style.color = `rgba(${color.join(',')})`;
+  };
+
+  // Now get all nine colors from canvas
+  let createPalette = function() {
+    let allColors = {
+      c1: getColor(10, 10),
+      c2: getColor(canvasWidth / 2 + 10, 0 + 10),
+      c3: getColor(canvasWidth - 10, 0),
+
+      c4: getColor(10, canvasHeight / 2 + 10),
+      c5: getColor(canvasWidth / 2 + 10, canvasHeight / 2 + 10),
+      c6: getColor(canvasWidth - 10, canvasHeight / 2),
+
+      c7: getColor(10, canvasHeight - 10),
+      c8: getColor(canvasWidth / 2 + 10, canvasHeight - 10),
+      c9: getColor(canvasWidth - 10, canvasHeight - 10)
+    };
+
+    // And apply them to the DOM
+    for (let i = 1; i < 10; i++) {
+      document.querySelectorAll('.hex')[i - 1].style.backgroundColor = 'rgba(' + allColors['c' + i].join(',') + ')';
+      document.querySelectorAll('.hex')[i - 1].textContent = rgbToHex(allColors['c' + i]);
+    }
+  };
+
+  // Run all the palette functions
+  let init = function(t) {setColors(t);drawCanvas();createPalette();};
+
+  init(1);
+
+  // Spacebar
+  window.addEventListener('keydown', function(e) {
+    if (e.keyCode === 32) {init(1);e.preventDefault();}
+  }, false);
+}());
+</script>
