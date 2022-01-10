@@ -1,0 +1,11 @@
+<a class="ƒ-col m10 post_box fade-right" href="{{ site.base }}{{ post.url }}">
+    {% include components/hero.html %}
+    <div class="p20">
+        <div class="title">{{post.title}}</div>
+        <p class="description">{{post.description}}</p>
+        <div class="ƒ ∆-bw">
+            <span class="date">{{ post.date | date: "%-d %B %Y" }}</span>
+            <span class="area">{{ post.area | default: "General" }}</span>
+        </div>
+    </div>
+</a>
