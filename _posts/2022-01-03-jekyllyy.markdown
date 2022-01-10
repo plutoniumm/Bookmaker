@@ -1,7 +1,8 @@
 ---
 layout: post
-description: "This is test articlnt on how to makemore and more and morw and longer and longer data data ok plis stop now. This is delibertaely extra long long"
 image_type: equation
+description: "This is test article 1 to experiment on how to make"
+equation: \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}\]
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

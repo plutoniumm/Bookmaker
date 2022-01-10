@@ -21,12 +21,14 @@
     <title>{{site.title}}</title>
 </head>
 
-<body class="" xmlns:svg="http://www.w3.org/2000/svg">
+<body class="w-100" xmlns:svg="http://www.w3.org/2000/svg">
     {% include objects/nav.html %}
 
-    <main>
+    <main class="w-100">
         {{content}}
     </main>
+
+    {% include objects/footer.html %}
 
     <script src="/assets/js/globals.js"></script>
 </body>
