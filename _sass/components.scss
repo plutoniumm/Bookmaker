@@ -1,3 +1,17 @@
+// ARCHIVE BOX
+#archive_links {
+    & li {
+        list-style-type: none;
+        border-bottom: 1px solid #fff;
+        font-size: 1.25rem;
+        &:hover a {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+// POST BOX
 .post_box{
     width: 320px;
     background:#fff;
@@ -22,22 +36,5 @@
     }
     & .date{
         color: var(--theme);
-    }
-}
-
-.article{
-    padding: 10px 0;
-    margin: 10px 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.35rem;
-    line-height: 1.75;
-    & *{
-        color: #3c484e;
-        max-width: 900px;
-        margin: 2rem auto;
-    }
-    & h1, & h2, & h3, & h4, & h5, & h6{
-        font-family: 'Helvetica', sans-serif;
-        font-weight: 700;
     }
 }
