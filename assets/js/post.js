@@ -16,7 +16,7 @@ const img_alt_process = string => {
     }
 };
 
-ƒA( 'img' ).map( e => {
+FA( 'img' ).map( e => {
     const img = img_alt_process( e.alt );
     e.alt = img.alt;
 

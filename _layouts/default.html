@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://os.nukes.in/OUI/css/global.css">
-    <link rel="stylesheet" href="https://os.nukes.in/OUI/css/keyframes.css">
+    <link rel="stylesheet" href="https://api.nukes.in/cms/css?name=keyframes.css">
+    <link rel="stylesheet" href="https://api.nukes.in/cms/css?name=global.css">
 
     <link rel="stylesheet" href="/assets/css/styles.css">
 
@@ -19,6 +19,11 @@
     </script>
 
     <title>{{site.title}}</title>
+
+    <script>
+        const F = ( id ) => document.querySelector( id );
+        const FA = ( id ) => [ ...document.querySelectorAll( id ) ];
+    </script>
 </head>
 
 <body class="w-100" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

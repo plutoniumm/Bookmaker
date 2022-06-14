@@ -1,4 +1,4 @@
-const mode_toggle = ƒ( '#mode-change' );
+const mode_toggle = F( '#mode-change' );
 
 mode_toggle.onclick = () => {
     console.log( mode_toggle );
