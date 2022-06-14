@@ -2,7 +2,6 @@
 #archive_links {
     & li {
         list-style-type: none;
-        border-bottom: 1px solid #fff;
         font-size: 1.25rem;
         &:hover a {
             text-decoration: underline;
@@ -37,4 +36,14 @@
     & .date{
         color: var(--theme);
     }
+}
+
+[size="icon"] {
+    width: 24px;
+    height: 24px;
+}
+
+.lim {
+    max-width: 1040px;
+    margin: 0 auto;
 }

@@ -13,5 +13,8 @@
   },
   "author": "Plutoniumm",
   "license": "MIT",
-  "homepage": "https://factorial.nukes.in/"
+  "homepage": "https://factorial.nukes.in/",
+  "dependencies": {
+    "predefined": "^1.2.5"
+  }
 }
