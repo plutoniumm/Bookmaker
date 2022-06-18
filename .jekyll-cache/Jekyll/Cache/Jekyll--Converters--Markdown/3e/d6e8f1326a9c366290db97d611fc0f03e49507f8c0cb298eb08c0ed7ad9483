@@ -1,0 +1,62 @@
+I".<h1 id="what-is-a-factorial">What is a factorial?</h1>
+<p>Suppose we have 5 pieces of Art in an Art Show. In how many ways can we arrange them in a line? The 1st work (any one of them) can be in 5 different spots. The second one of them can be now in 4 spots since 1 spot is taken by the first work. But the 4 of the 2nd work DEPEND on which spot is taken for the 1st because for each position of the first work we have 4 different sets of spots say</p>
+
+<ul>
+  <li>_ _ _ _ 1</li>
+  <li>_ _ _ 1 _</li>
+  <li>_ _ 1 _ _</li>
+  <li>_ 1 _ _ _</li>
+  <li>1 _ _ _ _</li>
+</ul>
+
+<p>For each of these cases the 2 can be in 4 different places making the total possibilities for just 2 works 20 places. The third one will now have one less spot to choose from so 3 and so on. 5x4x3x2x1. This descending multiplication is what is called a factorial represented as <code class="language-plaintext highlighter-rouge">5!</code>.</p>
+
+<p><strong>Caveat</strong>: So now any n objects can be permuted in <code class="language-plaintext highlighter-rouge">n!</code> ways. But what if we have 0 objects? What is <code class="language-plaintext highlighter-rouge">0!</code>? Since the number of ways to arrange 0 objects is just 1, no way at all (that is still a way) we define artificially 0! = 1.</p>
+
+<h2 id="what-is-then-the-factorial-of-a-real-number">What is then the factorial of a real number?</h2>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Factorial_Interpolation.svg" alt="Plot&gt;&gt;mh=300px&amp;h=400px&amp;w=auto" /></p>
+
+<div class="language-matlab highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">1</span><span class="err">!</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="mi">2</span><span class="err">!</span> <span class="o">=</span> <span class="mi">2</span><span class="n">x1</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="mi">3</span><span class="err">!</span> <span class="o">=</span> <span class="mi">3</span><span class="n">x2x1</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="mi">4</span><span class="err">!</span> <span class="o">=</span> <span class="mi">24</span>
+<span class="mi">5</span><span class="err">!</span> <span class="o">=</span> <span class="mi">120</span>
+</code></pre></div></div>
+
+<p>We now take the first few points and plot them. What happens however when we fill in the gaps and smooth out the connections between the points? We get a curve called the Gamma Function (<code class="language-plaintext highlighter-rouge">Γ-function</code>) first discovered by <a href="https://en.wikipedia.org/wiki/Leonhard_Euler">Leonhard Euler</a>. This function allows us to calculate the factorials for all real numbers.</p>
+
+<h3 id="interpreting-the-γ-function">Interpreting the Γ function</h3>
+<p>It may at first thought seem absurd to think of the number of arrangements of 0.5 objects! or even 3.14 objects and is very much so. The <code class="language-plaintext highlighter-rouge">Γ-function</code> however is first and foremost a generalization, so that is what it helps us to do, Generalize.</p>
+
+<h2 id="derivation">Derivation</h2>
+<p>The derivation of the Gamma function is somewhat of a hack, we make in a sense an educated guess rather than arriving at it systematically. Consider $e^{ax}$. We know for a fact that when we differentiate it w.r.t $x$ we will get a an extra a below.</p>
+
+\[\frac{d}{dx} e^{ax} = a e^{ax}\]
+
+<p>Now we we just run that with $a$ instead of $x$</p>
+
+\[\frac{d}{da} e^{ax} = x e^{ax}\]
+
+<p>We get an infinite revenue stream of $x$’s so long as we keep differentiating. So after $n$ times we are at $x^ne^{ax}$. Similarly we know as we keep differentiating $1/x$ we get $\frac{(-1)^{n+1}n!}{a^{n+1}}$. We will stash these two facts into storage for now.</p>
+
+<p>Now consider</p>
+
+\[\int_0^\infty e^{ax} dx = -\frac{1}{a} \quad \forall a&lt;0\]
+
+<p>Remember we need to generate n! in the numerator, so we now differentiate both sides w.r.t $a$ (Note: $a$ and NOT $x$). This will let us do differentiation on both sides without touching the integral sign on the left.</p>
+
+<p>On the left we do $\frac{d}{da}e^{ax}$, $n$ times as from before, and on the right we differentiate $\frac{d}{da}\frac{1}{a}$ as we did $\frac{d}{dx}\frac{1}{x}$ in just after that. We therefore get</p>
+
+\[\int_0^\infty x^n e^{ax} dx = \frac{(-1)^{n+1}n!}{a^{n+1}} \quad \forall a&lt;0\]
+
+<p>Now we just substitute for $a=-1$ both sides since that is a parameter anyway, helping us cancel out the oscillating negative sign at the same time.</p>
+
+\[\int_0^\infty x^n e^{-x} dx = n!\]
+
+<p>We have almost reached the final of the Gamma function. We can see on the left is a continuously varying function in x giving exactly equal to the factorial function on the right. The gamma function however is derived at an offset of 1, which we can simply add by doing n → n-1. Giving Us</p>
+
+\[\Gamma(n) = (n-1)! = \int_0^\infty x^{n-1} e^{-x} dx\]
+
+<h2 id="evaluation">Evaluation</h2>
+<p>Now that we have the Gamma function we can consider evaluating it at non positive numbers specially complex numbers.</p>
+:ET

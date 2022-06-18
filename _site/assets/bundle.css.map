@@ -1,0 +1,16 @@
+{
+	"version": 3,
+	"file": "bundle.css",
+	"sources": [
+		"bundle.scss",
+		"_sass/components.scss",
+		"_sass/theme.scss"
+	],
+	"sourcesContent": [
+		"@import \"components\";\n@import \"theme\";",
+		"// ARCHIVE BOX\n#archive_links {\n    & li {\n        list-style-type: none;\n        font-size: 1.25rem;\n        &:hover a {\n            text-decoration: underline;\n        }\n    }\n}\n\n\n// POST BOX\n.post_box{\n    width: 320px;\n    background:#fff;\n    border-radius: 5px;\n    overflow: hidden;\n    box-shadow: 8px 28px 50px rgba(39,44,49,.07),1px 6px 12px rgba(39,44,49,.04);\n    & .title{\n        font-size: 1.33rem;\n        padding: 5px 0;\n        height: 2.25em;\n    }\n    & img{\n        background: #fefefa;\n        width:320px;\n        height:200px;\n        object-fit: cover;\n    }\n    & .description{\n        height: 5rem;\n        color: #444;\n        font-family: Georgia, serif;\n    }\n    & .date{\n        color: var(--theme);\n    }\n}\n\n[size=\"icon\"] {\n    width: 24px;\n    height: 24px;\n}\n\n.lim {\n    max-width: 1040px;\n    margin: 0 auto;\n}",
+		":root{\n    --theme-u: #4cf;\n    --theme: #2af;\n    --theme-d: #08f;\n}\n\nbody{\n    background:#f4f8fb;\n}\n\n.dark{\n    background: #222;\n    color: #fff !important;\n}"
+	],
+	"names": [],
+	"mappings": "ACCA,AACI,cADU,CACR,EAAE,AAAC,CACD,eAAe,CAAE,IAAI,CACrB,SAAS,CAAE,OAAO,CAIrB,AAPL,AAIQ,cAJM,CACR,EAAE,CAGE,KAAK,CAAC,CAAC,AAAC,CACN,eAAe,CAAE,SAAS,CAC7B,AAMT,AAAA,SAAS,AAAA,CACL,KAAK,CAAE,KAAK,CACZ,UAAU,CAAC,IAAI,CACf,aAAa,CAAE,GAAG,CAClB,QAAQ,CAAE,MAAM,CAChB,UAAU,CAAE,GAAG,CAAC,IAAI,CAAC,IAAI,CAAC,mBAAkB,CAAC,GAAG,CAAC,GAAG,CAAC,IAAI,CAAC,mBAAkB,CAoB/E,AAzBD,AAMI,SANK,CAMH,MAAM,AAAA,CACJ,SAAS,CAAE,OAAO,CAClB,OAAO,CAAE,KAAK,CACd,MAAM,CAAE,MAAM,CACjB,AAVL,AAWI,SAXK,CAWH,GAAG,AAAA,CACD,UAAU,CAAE,OAAO,CACnB,KAAK,CAAC,KAAK,CACX,MAAM,CAAC,KAAK,CACZ,UAAU,CAAE,KAAK,CACpB,AAhBL,AAiBI,SAjBK,CAiBH,YAAY,AAAA,CACV,MAAM,CAAE,IAAI,CACZ,KAAK,CAAE,IAAI,CACX,WAAW,CAAE,cAAc,CAC9B,AArBL,AAsBI,SAtBK,CAsBH,KAAK,AAAA,CACH,KAAK,CAAE,YAAY,CACtB,CAGL,AAAA,AAAA,IAAC,CAAK,MAAM,AAAX,CAAa,CACV,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACf,AAED,AAAA,IAAI,AAAC,CACD,SAAS,CAAE,MAAM,CACjB,MAAM,CAAE,MAAM,CACjB,CChDA,AAAD,IAAK,AAAA,CACD,SAAS,CAAA,KAAC,CACV,OAAO,CAAA,KAAC,CACR,SAAS,CAAA,KAAC,CACb,AAED,AAAA,IAAI,AAAA,CACA,UAAU,CAAC,OAAO,CACrB,AAED,AAAA,KAAK,AAAA,CACD,UAAU,CAAE,IAAI,CAChB,KAAK,CAAE,eAAe,CACzB"
+}

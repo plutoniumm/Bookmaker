@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "post.css",
+	"sources": [
+		"post.scss",
+		"_sass/post.scss"
+	],
+	"sourcesContent": [
+		"@import \"post\";",
+		"body{\n    background: #fff;\n}\n\n.article{\n    padding: 10px 0;\n    margin: 10px 0;\n    font-family: Georgia, 'Times New Roman', Times, serif;\n    font-size: 1.35rem;\n    line-height: 1.75;\n    & *{\n        color: #3c484e;\n        max-width: 900px;\n        margin: 2rem auto;\n    }\n    & ul li, img{\n        margin: 1rem auto;\n    }\n    & h1, & h2, & h3, & h4, & h5, & h6{\n        font-family: 'Helvetica', sans-serif;\n    }\n}"
+	],
+	"names": [],
+	"mappings": "ACAA,AAAA,IAAI,AAAA,CACA,UAAU,CAAE,IAAI,CACnB,AAED,AAAA,QAAQ,AAAA,CACJ,OAAO,CAAE,MAAM,CACf,MAAM,CAAE,MAAM,CACd,WAAW,CAAE,wCAAwC,CACrD,SAAS,CAAE,OAAO,CAClB,WAAW,CAAE,IAAI,CAYpB,AAjBD,AAMI,QANI,CAMF,CAAC,AAAA,CACC,KAAK,CAAE,OAAO,CACd,SAAS,CAAE,KAAK,CAChB,MAAM,CAAE,SAAS,CACpB,AAVL,AAWI,QAXI,CAWF,EAAE,CAAC,EAAE,CAXX,QAAQ,CAWK,GAAG,AAAA,CACR,MAAM,CAAE,SAAS,CACpB,AAbL,AAcI,QAdI,CAcF,EAAE,CAdR,QAAQ,CAcI,EAAE,CAdd,QAAQ,CAcU,EAAE,CAdpB,QAAQ,CAcgB,EAAE,CAd1B,QAAQ,CAcsB,EAAE,CAdhC,QAAQ,CAc4B,EAAE,AAAA,CAC9B,WAAW,CAAE,uBAAuB,CACvC"
+}

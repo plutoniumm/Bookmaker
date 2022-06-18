@@ -1,0 +1,11 @@
+[
+    {
+        "svelte": [
+            "onMount",
+            "createEventDispatcher"
+        ],
+        "svelte/store": [
+            "writable"
+        ]
+    }
+]

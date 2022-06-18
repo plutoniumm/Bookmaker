@@ -1,20 +1,26 @@
 {
-  "name": "factorial",
-  "version": "0.1.0",
-  "description": "Supplements for Factorial",
-  "scripts": {
-    "git": "sh ./scripts/commit.sh",
-    "new": "sh ./scripts/new.sh",
-    "dev": "bundle exec jekyll serve --livereload"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/plutoniumm/Factorial.git"
-  },
-  "author": "Plutoniumm",
-  "license": "MIT",
-  "homepage": "https://factorial.nukes.in/",
-  "dependencies": {
-    "predefined": "^1.2.5"
-  }
+	"name": "ifactorial",
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "svelte-kit dev",
+		"build": "svelte-kit build",
+		"git": "sh ./scripts/commit.sh",
+		"new": "sh ./scripts/new.sh"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-static": "next",
+		"@sveltejs/kit": "next",
+		"svelte": "^3.46.0",
+		"svelte-check": "^2.7.1",
+		"typescript": "^4.7.2"
+	},
+	"dependencies": {
+		"node-sass": "^7.0.1",
+		"predefined": "^1.2.5",
+		"svelte-preprocess": "^4.10.7",
+		"unplugin-auto-import": "^0.8.8",
+		"vite": "^2.9.12",
+		"vite-plugin-replace": "^0.1.1"
+	}
 }

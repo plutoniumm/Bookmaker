@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" href="https://api.nukes.in/cms/css?name=global.css">
+	<link rel="stylesheet" href="https://api.nukes.in/cms/css?name=keyframes.css">
+
+	<script id="MathJax-script" async defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
+
+	<script>
+		MathJax = {
+			tex: { inlineMath: [ [ '$', '$' ] ] },
+			options: { enableMenu: false }
+		};
+	</script>
+
+	<style>
+		.MathJax svg {
+			margin: 0;
+		}
+	</style>
+	%sveltekit.head%
+</head>
+
+<body xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<main>%sveltekit.body%</main>
+
+</body>
+
+</html>

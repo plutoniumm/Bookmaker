@@ -1,0 +1,3 @@
+I"Æ<h1 id="what-is-a-factorial">What is a factorial?</h1>
+<p>Suppose we have 5 pieces of Art in an Art Show. In how many ways can we arrange them in a line? The 1st work (any one of them) can be in 5 different spots. The second one of them can be now in 4 spots since 1 spot is taken by the first work. But the 4 of the 2nd work DEPEND on which spot is taken for the 1st because for each position of the first work we have 4 different sets of spots say</p>
+:ET
