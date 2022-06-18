@@ -5,10 +5,15 @@
 <script>
 </script>
 
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
+<title />
+
+<section>
+	<h1>iFactorial</h1>
+	<p>
+		iFactorial is a simple calculator that can be used to calculate the
+		factorial of a number.
+	</p>
+</section>
 
 <style>
 </style>

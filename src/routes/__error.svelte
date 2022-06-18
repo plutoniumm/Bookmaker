@@ -12,6 +12,8 @@
 <script>
     export let message;
     export let status;
+
+    console.log(message);
 </script>
 
 {#if status == 404}
@@ -22,7 +24,9 @@
         <p><strong>Page not found :(</strong></p>
         <p>The requested page could not be found.</p>
     </div>
-{:else}{/if}
+{:else}
+    {status}
+{/if}
 
 <style>
     .container {

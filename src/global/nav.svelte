@@ -1,8 +1,8 @@
 <script>
 </script>
 
-<nav class="fade-down">
-    <section class="lim ƒ ∆-bw">
+<nav class="fade-down w-100">
+    <section class="ƒ ∆-bw">
         <div class="ƒ fw3" id="nav-hero">
             <div class="ƒ space-btm" style="border-bottom:2px solid #000">
                 <a href="/equations">
@@ -12,15 +12,11 @@
             </div>
         </div>
         <div class="space-btm">
-            <!-- <svg id="mode-change" viewBox="0 0 32 32">
+            <svg id="mode-change" viewBox="0 0 32 32">
                 <path
                     d="M14 2C 9 2 3 7 3 15 3 23 9 29 17 29 25 29 30 23 30 18 19 25 7 13 14 2Z"
                 />
             </svg>
-            <svg viewBox="-4 -4 36 36" style="padding-left:10px;">
-                <circle cx="14" cy="14" r="12" />
-                <path d="M23 23 L30 30" />
-            </svg> -->
         </div>
     </section>
 </nav>
@@ -37,12 +33,15 @@
     }
 
     nav {
-        background: #fff;
         align-items: center;
         padding: 1rem 1rem 0 1rem;
         border-bottom: 1px solid #0001;
+        section {
+            max-width: calc(1040px + 40px);
+            margin: 0 auto;
+        }
         img {
-            padding-top: 2px;
+            padding-top: 3px;
             margin-right: 7px;
         }
         #nav-hero {

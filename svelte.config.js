@@ -1,22 +1,23 @@
-import sveltePreprocess from 'svelte-preprocess';
-import statix from '@sveltejs/adapter-static';
+import { mdsvex } from "mdsvex";
+// PreProcessors
+import statix from "@sveltejs/adapter-static";
+import sveltePreprocess from "svelte-preprocess";
+import AutoImport from "unplugin-auto-import/vite";
 import { replaceCodePlugin } from "vite-plugin-replace";
-import AutoImport from 'unplugin-auto-import/vite';
-
-import AUTO_IMPORTS from './config/auto-import.json' assert {type: "json"};
-import REPLACE from './config/replace.json' assert {type: "json"};
+// CONFIG FILES
 import ALIASES from "./config/alias.js";
+import mdsvexConfig from "./config/mdsvex.config.js";
+import REPLACE from "./config/replace.json" assert { type: "json" };
+import AUTO_IMPORTS from "./config/auto-import.json" assert { type: "json" };
 
 const config = {
-	preprocess: sveltePreprocess( {
-		defaults: { markup: 'html', script: 'javascript', style: 'css' },
-		sourceMap: false
-	} ),
+	extensions: [ ".svelte", ...mdsvexConfig.extensions ],
+	preprocess: [ sveltePreprocess( { sourceMap: false } ), mdsvex( mdsvexConfig ) ],
 	kit: {
 		adapter: statix( {
-			pages: 'build',
-			assets: 'build',
-			precompress: true
+			pages: "build",
+			assets: "build",
+			precompress: true,
 		} ),
 		vite: {
 			plugins: [
@@ -24,17 +25,16 @@ const config = {
 				AutoImport( {
 					include: [
 						/\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
-						/\.svelte$/, /\.svelte\?svelte/, // .svelte
+						/\.svelte$/, // .svelte
 					],
 					imports: AUTO_IMPORTS,
-					vueTemplate: false
-				} )
+					vueTemplate: false,
+				} ),
 			],
-			resolve: { alias: ALIASES }
+			resolve: { alias: ALIASES },
 		},
-
-		prerender: { default: true }
-	}
+		prerender: { default: true },
+	},
 };
 
 export default config;
