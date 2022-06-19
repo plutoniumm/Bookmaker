@@ -1,4 +1,4 @@
-import { mdsvex } from "mdsvex";
+import { markdown } from "svelte-preprocess-markdown";
 // PreProcessors
 import statix from "@sveltejs/adapter-static";
 import sveltePreprocess from "svelte-preprocess";
@@ -6,13 +6,15 @@ import AutoImport from "unplugin-auto-import/vite";
 import { replaceCodePlugin } from "vite-plugin-replace";
 // CONFIG FILES
 import ALIASES from "./config/alias.js";
-import mdsvexConfig from "./config/mdsvex.config.js";
 import REPLACE from "./config/replace.json" assert { type: "json" };
 import AUTO_IMPORTS from "./config/auto-import.json" assert { type: "json" };
 
 const config = {
-	extensions: [ ".svelte", ...mdsvexConfig.extensions ],
-	preprocess: [ sveltePreprocess( { sourceMap: false } ), mdsvex( mdsvexConfig ) ],
+	extensions: [ ".svelte",  ".svelte.md", ".md", ".svx" ],
+	preprocess: [
+		sveltePreprocess( { sourceMap: false } ),
+		markdown( { headerIds: true, headerPrefix: 'toc_' } )
+	],
 	kit: {
 		adapter: statix( {
 			pages: "build",

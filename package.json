@@ -11,7 +11,6 @@
   "devDependencies": {
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
-    "mdsvex": "^0.10.5",
     "node-sass": "^7.0.1",
     "rollup": "^2.75.6",
     "rollup-plugin-svelte": "^7.1.0",
@@ -22,10 +21,8 @@
     "vite-plugin-replace": "^0.1.1"
   },
   "dependencies": {
+    "katex": "^0.16.0",
     "predefined": "^1.2.5",
-    "rehype-katex": "^6.0.2",
-    "rehype-katex-svelte": "^1.1.2",
-    "rehype-mathjax": "^4.0.2",
-    "remark-math": "^5.1.1"
+    "svelte-preprocess-markdown": "^2.7.3"
   }
 }

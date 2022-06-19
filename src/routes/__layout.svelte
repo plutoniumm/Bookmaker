@@ -14,6 +14,9 @@
 		--theme: #2af;
 		--theme-d: #08f;
 	}
+	:global(.katex-html) {
+		display: none;
+	}
 	main {
 		margin-top: 3rem;
 		max-width: 1040px;
