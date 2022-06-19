@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
+    "build:server": "pnpm i --no-freeze-lockfile && svelte-kit build",
     "git": "sh ./scripts/commit.sh",
     "new": "sh ./scripts/new.sh"
   },
