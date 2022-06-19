@@ -1,11 +1,12 @@
 <script>
 </script>
 
-<nav class="fade-down w-100">
+<nav class="fade-down">
     <section class="ƒ ∆-bw">
         <div class="ƒ fw3" id="nav-hero">
             <div class="ƒ space-btm" style="border-bottom:2px solid #000">
-                <a href="/equations">
+                <!-- <a href="/equations" sveltekit:prefetch> -->
+                <a href="/">
                     <img src="/icons/if.svg" alt="Logo" />
                 </a>
                 <a href="/">iFactorial</a>
@@ -34,6 +35,7 @@
 
     nav {
         align-items: center;
+        width: calc(100% - 2rem);
         padding: 1rem 1rem 0 1rem;
         border-bottom: 1px solid #0001;
         section {
