@@ -12,7 +12,7 @@ const img_alt_process = string => {
 
     return {
         alt,
-        css,
+        css
     }
 };
 
@@ -21,8 +21,7 @@ FA( 'img' ).map( e => {
     e.alt = img.alt;
 
     for ( const atom in img.css ) {
-        console.log( atom, e.style.atom, img.css[ atom ] );
-        e.style.atom = img.css[ atom ];
-        console.log( atom, e.style.atom );
+        e.style[ atom ] = img.css[ atom ];
+        console.log( atom, e.style[ atom ], img.css[ atom ] );
     }
 } )

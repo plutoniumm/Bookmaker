@@ -18,8 +18,7 @@
 		display: none;
 	}
 	main {
-		margin-top: 3rem;
 		max-width: 1040px;
-		margin: 0 auto;
+		margin: 3rem auto;
 	}
 </style>
