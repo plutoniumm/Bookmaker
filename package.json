@@ -12,18 +12,18 @@
   "devDependencies": {
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
-    "node-sass": "^7.0.1",
-    "rollup": "^2.75.6",
-    "rollup-plugin-svelte": "^7.1.0",
-    "svelte": "^3.46.0",
-    "svelte-preprocess": "^4.10.7",
-    "unplugin-auto-import": "^0.8.8",
-    "vite": "^2.9.12",
-    "vite-plugin-replace": "^0.1.1"
+    "node-sass": "7.0.1",
+    "rollup": "2.75.6",
+    "rollup-plugin-svelte": "7.1.0",
+    "svelte": "3.48.0",
+    "svelte-preprocess": "4.10.7",
+    "unplugin-auto-import": "0.8.8",
+    "vite": "2.9.12",
+    "vite-plugin-replace": "0.1.1"
   },
   "dependencies": {
-    "katex": "^0.16.0",
-    "predefined": "^1.2.5",
-    "svelte-preprocess-markdown": "^2.7.3"
+    "katex": "0.16.0",
+    "predefined": "1.2.5",
+    "svelte-preprocess-markdown": "2.7.3"
   }
 }
