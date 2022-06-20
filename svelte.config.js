@@ -10,9 +10,11 @@ import REPLACE from "./config/replace.json" assert { type: "json" };
 import AUTO_IMPORTS from "./config/auto-import.json" assert { type: "json" };
 
 const config = {
-	extensions: [ ".svelte",  ".svelte.md", ".md", ".svx" ],
+	extensions: [ ".svelte", ".svelte.md", ".md", ".svx" ],
 	preprocess: [
-		sveltePreprocess( { sourceMap: false } ),
+		sveltePreprocess( {
+			sourceMap: false
+		} ),
 		markdown( { headerIds: true, headerPrefix: 'toc_' } )
 	],
 	kit: {

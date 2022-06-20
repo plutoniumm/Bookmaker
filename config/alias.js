@@ -1,6 +1,7 @@
 import path from 'path';
 
 const list = [
+    [ '@templates', 'src/template' ],
     [ '@global', 'src/global' ],
     [ '@components', 'src/components' ],
     [ '@data', 'src/data' ]

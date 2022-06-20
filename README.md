@@ -1,11 +1,28 @@
 <div align="center">
-<div style="font-size:3rem;font-weight:100;">The iFactorial</div>
-<img src="./static/icons/if.svg" alt="amos" width="300px" height="300px"/>
+<div>The ifactorial</div>
+<img src="./static/icons/if.svg" alt="amos" width="200px" height="200px"/>
 </div>
 
-# iFactorial
-The iFactorial - No Longer a blog
+# ifactorial
+The ifactorial - No Longer a blog
 
 idk what it is know, probably a social media feed
 
+# API
+```ts
+interface Metadata {
+    title: string;
+    description: string;
+    equation: string; // Returned as valid Katex string
+    date: string; // Returned as DD/MM/YYYY
+    area: string;
+}
+
+interface Post{
+    meta: Metadata;
+    path: string;
+}
+
+const ifactorial: Post = await fetch('https://ifactorial.in/api/posts').then(r=>r.json());
+```
 <!-- const { response, json } = await api.get(session.API_ENDPOINT, url); -->

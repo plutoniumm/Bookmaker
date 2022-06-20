@@ -1,57 +1,52 @@
 <script>
+    import Tex from "./Katex.svelte";
+    import Container from "@templates/postContainer.svelte";
     export let //
-        title = "i!",
-        url = "#",
+        post = {};
+
+    const {
+        title = "What is i!",
         equation = "i!",
         description = "A simple, yet powerful, math equation solver.",
         date = new Date(),
-        area = "General";
+        area = "General",
+    } = post.meta;
+
+    const options = { year: "numeric", month: "long", day: "numeric" };
 </script>
 
-<a
-    rel="external"
-    class="ƒ-col m10 rx5 fade-right"
-    href={url}
-    sveltekit:prefetch
->
+<Container type="link" href={post.path}>
     <div class="w-100" style="height: 200px;">
-        <!-- <div id="hero_{{id}}" class="ƒ ∆-ct w-100 h-100" style="align-items: center;background: #f5f5f7;"> -->
         <div id="hero_{title.replaceAll(' ', '-')}" class="ƒ ∆-ct w-100 h-100">
-            {equation}
+            <Tex eq={equation} />
         </div>
     </div>
-    <div class="p20">
-        <div class="title fw6">{title}</div>
+    <div class="p20 body">
+        <div class="title fw6">{@html title}</div>
         <p class="description fw3">{description.slice(0, 100)}</p>
         <div class="ƒ ∆-bw">
-            <span class="date" style="font-size:0.9em;">{date}</span>
+            <span class="date" style="font-size:0.9em;"
+                >{new Date(date).toLocaleDateString("en-GB", options)}</span
+            >
             <span class="area">{area}</span>
         </div>
     </div>
-</a>
+</Container>
 
 <style lang="scss">
     [id^="hero"] {
-        background: linear-gradient(155deg, #2af, #6ef);
+        background: var(--theme-gradient);
         color: #fff;
         align-items: center;
+        font-size: 2rem;
     }
-    a {
-        width: 320px;
+    .body {
         background: #fff;
-        overflow: hidden;
-        box-shadow: 8px 28px 50px rgba(39, 44, 49, 0.07),
-            1px 6px 12px rgba(39, 44, 49, 0.04);
+        color: #000;
         & .title {
             font-size: 1.33rem;
             padding: 5px 0;
             height: 2.25em;
-        }
-        & img {
-            background: #fefefa;
-            width: 320px;
-            height: 200px;
-            object-fit: cover;
         }
         & .description {
             height: 5rem;
