@@ -14,7 +14,10 @@
 <title />
 
 <section>
+	<h1>What's Happening?</h1>
 	<Posts {posts} />
+	<hr class="w-50 o-25" style="margin: 3rem auto;" />
+	<h1>Feed</h1>
 	<Feed />
 </section>
 

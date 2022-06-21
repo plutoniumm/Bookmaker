@@ -26,3 +26,6 @@ interface Post{
 const ifactorial: Post = await fetch('https://ifactorial.in/api/posts').then(r=>r.json());
 ```
 <!-- const { response, json } = await api.get(session.API_ENDPOINT, url); -->
+
+# Todo
+- https://www.npmjs.com/package/svelte-infinite-scrolling

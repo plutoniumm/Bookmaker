@@ -8,13 +8,13 @@
     <a
         rel="external"
         {href}
-        class="ƒ-col cont rx5 fade-right"
+        class="ƒ-col shadow cont rx5 fade-right"
         sveltekit:prefetch
     >
         <slot />
     </a>
 {:else}
-    <div class="ƒ-col rx5 cont fade-right">
+    <div class="ƒ-col shadow rx5 cont fade-right">
         <slot />
     </div>
 {/if}
@@ -28,7 +28,5 @@
         background: var(--theme-gradient);
         color: #fff;
         overflow: hidden;
-        box-shadow: 8px 28px 50px rgba(39, 44, 49, 0.07),
-            1px 6px 12px rgba(39, 44, 49, 0.04);
     }
 </style>

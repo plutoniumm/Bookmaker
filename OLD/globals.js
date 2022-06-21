@@ -1,14 +1,25 @@
-const mode_toggle = F( '#mode-change' );
+// POST.JS
+const img_alt_process = string => {
+    const [ alt, meta ] = string.split( '>>' );
 
-mode_toggle.onclick = () => {
-    console.log( mode_toggle );
-    if ( document.body.classList.contains( 'dark' ) ) {
-        mode_toggle.setAttribute( 'stroke', '#fff' );
-        mode_toggle.setAttribute( 'fill', '#000' );
-        document.body.classList.remove( 'dark' );
-    } else {
-        mode_toggle.setAttribute( 'stroke', '#000' );
-        mode_toggle.setAttribute( 'fill', 'none' );
-        document.body.classList.add( 'dark' );
+    const params = new URLSearchParams( meta );
+    params.get( "abc" );
+
+    const css = {
+        maxHeight: params.get( "mh" ),
+        height: params.get( "h" ),
+        width: params.get( "w" )
     }
+
+    return { alt, css }
 };
+
+FA( 'img' ).map( e => {
+    const img = img_alt_process( e.alt );
+    e.alt = img.alt;
+
+    for ( const atom in img.css ) {
+        e.style[ atom ] = img.css[ atom ];
+        console.log( atom, e.style[ atom ], img.css[ atom ] );
+    }
+} )
