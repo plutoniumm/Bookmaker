@@ -1,24 +1,24 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@snlab/sveltex-unified': ^0.0.16
   '@sveltejs/adapter-static': next
   '@sveltejs/kit': next
-  katex: 0.16.0
+  katex: ^0.16.0
   node-sass: 7.0.1
   predefined: 1.2.5
   rollup: 2.75.7
   rollup-plugin-svelte: 7.1.0
   svelte: 3.48.0
   svelte-preprocess: 4.10.7
-  svelte-preprocess-markdown: 2.7.3
   unplugin-auto-import: 0.8.8
   vite: 2.9.12
   vite-plugin-replace: 0.1.1
 
 dependencies:
+  '@snlab/sveltex-unified': 0.0.16
   katex: 0.16.0
   predefined: 1.2.5
-  svelte-preprocess-markdown: 2.7.3
 
 devDependencies:
   '@sveltejs/adapter-static': 1.0.0-next.34
@@ -106,6 +106,10 @@ packages:
       estree-walker: 2.0.2
       picomatch: 2.3.1
     dev: true
+
+  /@snlab/sveltex-unified/0.0.16:
+    resolution: {integrity: sha512-ZpLiQ3TFJ4c/8E5ql0vmSDah2vRzjXCXeINetL8KXLv9aydZarWaFDJD86qF1xX7IdpAQU8A712VbucNJkkZkA==}
+    dev: false
 
   /@sveltejs/adapter-static/1.0.0-next.34:
     resolution: {integrity: sha512-XjuMhemme5z0L/B2nTZpA6k+RJjF+b6L96ts6gIQ6ixiCzJQSbBqJhrrBYBCaeLAKvdUMoGEmX8m862JhKjRFg==}
@@ -275,12 +279,6 @@ packages:
       delegates: 1.0.0
       readable-stream: 3.6.0
     dev: true
-
-  /argparse/1.0.10:
-    resolution: {integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==}
-    dependencies:
-      sprintf-js: 1.0.3
-    dev: false
 
   /arrify/1.0.1:
     resolution: {integrity: sha512-3CYzex9M9FGQjCGMGyi6/31c8GJbgb0qGyrx5HWxPd0aCwh4cB2YjMb2Xf9UuoogrMrlO9cTqnB5rI5GHZTcUA==}
@@ -818,12 +816,6 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /esprima/4.0.1:
-    resolution: {integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==}
-    engines: {node: '>=4'}
-    hasBin: true
-    dev: false
-
   /estree-walker/0.6.1:
     resolution: {integrity: sha512-SqmZANLWS0mnatqbSfRP5g8OXZC12Fgg1IwNtLsyHDzJizORW4khDfjPqJZsemPWBB2uqykUah5YpQ6epsqC/w==}
     dev: true
@@ -893,12 +885,6 @@ packages:
       combined-stream: 1.0.8
       mime-types: 2.1.35
     dev: true
-
-  /front-matter/3.2.1:
-    resolution: {integrity: sha512-YUhgEhbL6tG+Ok3vTGIoSDKqcr47aSDvyhEqIv8B+YuBJFsPnOiArNXTPp2yO07NL+a0L4+2jXlKlKqyVcsRRA==}
-    dependencies:
-      js-yaml: 3.14.1
-    dev: false
 
   /fs-minipass/2.1.0:
     resolution: {integrity: sha512-V/JgOLFCS+R6Vcq0slCuaeWEdNC3ouDlJMNIsacH2VtALiu9mV4LPrHc5cDl8k5aw6J8jwgWWpiTo5RYhmIzvg==}
@@ -1224,14 +1210,6 @@ packages:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
     dev: true
 
-  /js-yaml/3.14.1:
-    resolution: {integrity: sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==}
-    hasBin: true
-    dependencies:
-      argparse: 1.0.10
-      esprima: 4.0.1
-    dev: false
-
   /jsbn/0.1.1:
     resolution: {integrity: sha512-UVU9dibq2JcFWxQPA6KCqj5O42VOmAY3zQUfEKxU0KpTGXwNoCjkX1e13eHNvw/xPynt6pU0rZ1htjWTNTSXsg==}
     dev: true
@@ -1357,12 +1335,6 @@ packages:
     resolution: {integrity: sha512-hdN1wVrZbb29eBGiGjJbeP8JbKjq1urkHJ/LIP/NY48MZ1QVXUsQBV1G1zvYFHn1XE06cwjBsOI2K3Ulnj1YXQ==}
     engines: {node: '>=8'}
     dev: true
-
-  /marked/1.2.9:
-    resolution: {integrity: sha512-H8lIX2SvyitGX+TRdtS06m1jHMijKN/XjfH6Ooii9fvxMlh8QdqBfBDkGUpMWH2kQNrtixjzYUa3SH8ROTgRRw==}
-    engines: {node: '>= 8.16.2'}
-    hasBin: true
-    dev: false
 
   /meow/9.0.0:
     resolution: {integrity: sha512-+obSblOQmRhcyBt62furQqRAQpNyWXo8BuQ5bN7dG8wmwQ+vwHKp/rCFD4CrTP8CsDQD1sjoZ94K417XEUk8IQ==}
@@ -2104,10 +2076,6 @@ packages:
     resolution: {integrity: sha512-Ctl2BrFiM0X3MANYgj3CkygxhRmr9mi6xhejbdO960nF6EDJApTYpn0BQnDKlnNBULKiCN1n3w9EBkHK8ZWg+g==}
     dev: true
 
-  /sprintf-js/1.0.3:
-    resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
-    dev: false
-
   /sshpk/1.17.0:
     resolution: {integrity: sha512-/9HIEs1ZXGhSPE8X6Ccm7Nam1z8KcoCqPdI7ecm1N33EzAetWahvQWVqLZtaZQ+IDKX4IyA2o0gBzqIMkAagHQ==}
     engines: {node: '>=0.10.0'}
@@ -2204,13 +2172,6 @@ packages:
     dependencies:
       svelte: 3.48.0
     dev: true
-
-  /svelte-preprocess-markdown/2.7.3:
-    resolution: {integrity: sha512-KJkIDNp41r1qfdKY6dRtYnADV0anYKYlJ2k+DX5SbXRDqKxZJN8UlFiuW/c1XoT1lQ1bE5QQe9uzWJgJrQPnzw==}
-    dependencies:
-      front-matter: 3.2.1
-      marked: 1.2.9
-    dev: false
 
   /svelte-preprocess/4.10.7_7na7m37n4dmvcpiduxi3duce4e:
     resolution: {integrity: sha512-sNPBnqYD6FnmdBrUmBCaqS00RyCsCpj2BG58A1JBswNF7b0OKviwxqVrOL/CKyJrLSClrSeqQv5BXNg2RUbPOw==}

@@ -1,5 +1,4 @@
 <script>
-    console.log(2);
 </script>
 
 <article>
@@ -7,6 +6,9 @@
 </article>
 
 <style lang="scss">
+    :global(body) {
+        background: #fff;
+    }
     article {
         font-size: 19px;
         color: #3c484e;

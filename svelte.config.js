@@ -1,4 +1,4 @@
-import { markdown } from "svelte-preprocess-markdown";
+import { sveltex } from '@snlab/sveltex-unified';
 // PreProcessors
 import statix from "@sveltejs/adapter-static";
 import sveltePreprocess from "svelte-preprocess";
@@ -12,10 +12,8 @@ import AUTO_IMPORTS from "./config/auto-import.json" assert { type: "json" };
 const config = {
 	extensions: [ ".svelte", ".svelte.md", ".md", ".svx" ],
 	preprocess: [
-		sveltePreprocess( {
-			sourceMap: false
-		} ),
-		markdown( { headerIds: true, headerPrefix: 'toc_' } )
+		sveltePreprocess( { sourceMap: false } ),
+		sveltex( { extension: '.md' } )
 	],
 	kit: {
 		adapter: statix( {

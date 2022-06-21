@@ -1,6 +1,6 @@
 <div align="center">
 <div>The ifactorial</div>
-<img src="./static/icons/if.svg" alt="amos" width="200px" height="200px"/>
+<img src="./static/icons/if.svg" alt="amos" width="100px" height="100px"/>
 </div>
 
 # ifactorial
@@ -29,3 +29,7 @@ const ifactorial: Post = await fetch('https://ifactorial.in/api/posts').then(r=>
 
 # Todo
 - https://www.npmjs.com/package/svelte-infinite-scrolling
+
+
+## Maintainance
+For all issues related to @snlab/sveltex-unified refer to [@spatialnetworkslab/sveltex-unified](https://github.com/spatialnetworkslab/sveltex-unified/blob/master/src/index.js)
