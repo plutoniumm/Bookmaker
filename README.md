@@ -1,6 +1,6 @@
 <div align="center">
 <div>The ifactorial</div>
-<img src="./static/icons/if.svg" alt="amos" width="100px" height="100px"/>
+<img src="./static/icons/if.svg" alt="amos" width="200px" height="200px"/>
 </div>
 <br/>
 The ifactorial - A borderline rant, definitely not a blog probably just a well over engineered notebook used on rare occasions.
@@ -8,11 +8,12 @@ The ifactorial - A borderline rant, definitely not a blog probably just a well o
 <br/>
 
 # API
-You can use the rss feed as
-```
-https://ifactorial.in/api/rss
+```js
+// All API is at the baseurl
+baseURL = 'https://ifactorial.in'
 ```
 
+You can use the rss feed at `/api/rss`. Moving on to the JSON API.
 ## `/posts`
 ```ts
 interface Metadata {
@@ -30,7 +31,7 @@ interface Post {
     path: string
 };
 
-const ifactorial: Post = await fetch('https://ifactorial.in/api/posts').then(r=>r.json());
+const ifactorial: Post = await fetch('/api/posts').then(r=>r.json());
 ```
 
 ## `/feed`
@@ -46,10 +47,10 @@ interface Item {
     // exact format is in works for now
 };
 
-const ifactorial: Array<Item> = await fetch('https://ifactorial.in/api/feed?edition=001').then(r=>r.json());
+const ifactorial: Array<Item> = await fetch('/api/feed?edition=001').then(r=>r.json());
 // returns all items in edition 001
 
-const ifactorial: Item = await fetch('https://ifactorial.in/api/feed?edition=001&id=0').then(r=>r.json());
+const ifactorial: Item = await fetch('/api/feed?edition=001&id=0').then(r=>r.json());
 // returns 0th item in edition 001
 ```
 
