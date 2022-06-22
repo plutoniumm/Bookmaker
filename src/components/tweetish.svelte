@@ -18,6 +18,7 @@
     <div>
         {#if iframe}
             <iframe
+                title="External Site"
                 class="w-100 hero rx5"
                 src={iframe.url}
                 frameborder="0"

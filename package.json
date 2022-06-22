@@ -21,8 +21,10 @@
     "vite-plugin-replace": "0.1.1"
   },
   "dependencies": {
-    "@snlab/sveltex-unified": "^0.0.16",
     "katex": "^0.16.0",
-    "predefined": "1.2.5"
+    "marked": "^4.0.17",
+    "marked-katex": "^0.3.8",
+    "predefined": "1.2.5",
+    "svelte-preprocess-markdown": "^2.7.3"
   }
 }

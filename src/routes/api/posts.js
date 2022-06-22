@@ -16,8 +16,6 @@ export const get = async () => {
 
     const sortedPosts = allPosts.sort( dateSort ); // newest first
 
-    return {
-        body: sortedPosts
-    };
+    return { body: sortedPosts };
 };
 // /api/posts.json

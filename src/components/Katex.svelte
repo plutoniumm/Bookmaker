@@ -13,6 +13,3 @@
 </script>
 
 {@html katexString}
-
-<style>
-</style>

@@ -1,19 +1,22 @@
-import { sveltex } from '@snlab/sveltex-unified';
+import { markdown } from 'svelte-preprocess-markdown';
 // PreProcessors
 import statix from "@sveltejs/adapter-static";
-import sveltePreprocess from "svelte-preprocess";
+import autoProcess from "svelte-preprocess";
+const { replace } = autoProcess;
 import AutoImport from "unplugin-auto-import/vite";
 import { replaceCodePlugin } from "vite-plugin-replace";
 // CONFIG FILES
 import ALIASES from "./config/alias.js";
+import { extensionCheck } from "./config/md.js";
 import REPLACE from "./config/replace.json" assert { type: "json" };
 import AUTO_IMPORTS from "./config/auto-import.json" assert { type: "json" };
 
 const config = {
 	extensions: [ ".svelte", ".svelte.md", ".md", ".svx" ],
 	preprocess: [
-		sveltePreprocess( { sourceMap: false } ),
-		sveltex( { extension: '.md' } )
+		autoProcess( { sourceMap: false } ),
+		extensionCheck(),
+		markdown( { headerIds: false } )
 	],
 	kit: {
 		adapter: statix( {

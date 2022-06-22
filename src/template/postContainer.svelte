@@ -22,6 +22,7 @@
 <style lang="scss">
     .cont {
         width: 320px;
+        margin-top: 15px;
         max-height: 430px;
         content-visibility: auto;
         contain-intrinsic-size: 430px;

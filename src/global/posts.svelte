@@ -5,7 +5,7 @@
     export let posts = [];
 </script>
 
-<div class="ƒ ∆-bw">
+<div class="ƒ ƒ∑ ∆-bw">
     <Container>
         <div class="p10 †c" style="height:30%;">
             <div class="fw7 p20" style="font-size: 1.5rem;">
