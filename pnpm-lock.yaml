@@ -1,12 +1,9 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@snlab/sveltex-unified': ^0.0.16
   '@sveltejs/adapter-static': next
   '@sveltejs/kit': next
   katex: ^0.16.0
-  marked: ^4.0.17
-  marked-katex: ^0.3.8
   node-sass: 7.0.1
   predefined: 1.2.5
   rollup: 2.75.7
@@ -19,10 +16,7 @@ specifiers:
   vite-plugin-replace: 0.1.1
 
 dependencies:
-  '@snlab/sveltex-unified': 0.0.16
   katex: 0.16.0
-  marked: 4.0.17
-  marked-katex: 0.3.8
   predefined: 1.2.5
   svelte-preprocess-markdown: 2.7.3
 
@@ -112,10 +106,6 @@ packages:
       estree-walker: 2.0.2
       picomatch: 2.3.1
     dev: true
-
-  /@snlab/sveltex-unified/0.0.16:
-    resolution: {integrity: sha512-ZpLiQ3TFJ4c/8E5ql0vmSDah2vRzjXCXeINetL8KXLv9aydZarWaFDJD86qF1xX7IdpAQU8A712VbucNJkkZkA==}
-    dev: false
 
   /@sveltejs/adapter-static/1.0.0-next.34:
     resolution: {integrity: sha512-XjuMhemme5z0L/B2nTZpA6k+RJjF+b6L96ts6gIQ6ixiCzJQSbBqJhrrBYBCaeLAKvdUMoGEmX8m862JhKjRFg==}
@@ -1368,20 +1358,9 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /marked-katex/0.3.8:
-    resolution: {integrity: sha512-YaIk/gaaAilSB0HKVetD+1VwkgauTX1kjFIpAsbrNdX2o/F6ja/3k9nufYjBmXIZX7yxVqzePBw4yFPh8dGOew==}
-    hasBin: true
-    dev: false
-
   /marked/1.2.9:
     resolution: {integrity: sha512-H8lIX2SvyitGX+TRdtS06m1jHMijKN/XjfH6Ooii9fvxMlh8QdqBfBDkGUpMWH2kQNrtixjzYUa3SH8ROTgRRw==}
     engines: {node: '>= 8.16.2'}
-    hasBin: true
-    dev: false
-
-  /marked/4.0.17:
-    resolution: {integrity: sha512-Wfk0ATOK5iPxM4ptrORkFemqroz0ZDxp5MWfYA7H/F+wO17NRWV5Ypxi6p3g2Xmw2bKeiYOl6oVnLHKxBA0VhA==}
-    engines: {node: '>= 12'}
     hasBin: true
     dev: false
 

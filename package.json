@@ -22,8 +22,6 @@
   },
   "dependencies": {
     "katex": "^0.16.0",
-    "marked": "^4.0.17",
-    "marked-katex": "^0.3.8",
     "predefined": "1.2.5",
     "svelte-preprocess-markdown": "^2.7.3"
   }

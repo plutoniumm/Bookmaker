@@ -2,7 +2,6 @@ import { markdown } from 'svelte-preprocess-markdown';
 // PreProcessors
 import statix from "@sveltejs/adapter-static";
 import autoProcess from "svelte-preprocess";
-const { replace } = autoProcess;
 import AutoImport from "unplugin-auto-import/vite";
 import { replaceCodePlugin } from "vite-plugin-replace";
 // CONFIG FILES
