@@ -57,3 +57,10 @@ const ifactorial: Item = await fetch('/api/feed?edition=001&id=0').then(r=>r.jso
 
 # Todo
 - https://www.npmjs.com/package/svelte-infinite-scrolling
+
+# Server
+```bash
+# Starts server @3001
+$ npm run server
+```
+To develop svelte components just focus on `/src`. Getting the components, starting the server and displaying it at `localhost:3001` will all be done by engine.

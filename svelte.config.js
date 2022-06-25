@@ -6,15 +6,17 @@ import AutoImport from "unplugin-auto-import/vite";
 import { replaceCodePlugin } from "vite-plugin-replace";
 // CONFIG FILES
 import ALIASES from "./config/alias.js";
-import { extensionCheck } from "./config/md.js";
+import Workinate from "./config/WorkerScript.js";
+import { Katexer } from "./config/md.js";
 import REPLACE from "./config/replace.json" assert { type: "json" };
 import AUTO_IMPORTS from "./config/auto-import.json" assert { type: "json" };
 
 const config = {
 	extensions: [ ".svelte", ".svelte.md", ".md", ".svx" ],
 	preprocess: [
+		Workinate(),
 		autoProcess( { sourceMap: false } ),
-		extensionCheck(),
+		Katexer(),
 		markdown( { headerIds: false } )
 	],
 	kit: {

@@ -1,17 +1,14 @@
 import katex from "katex";
 const replacements = [ /\$\$[^\$]*\$\$/g, /\$[^\$]*\$/g ];
 
-export function extensionCheck () {
-
+export function Katexer () {
     return {
         markup ( { content, filename } ) {
-            let code = content;
-            // .MD
             if ( filename.includes( '.md' ) )
                 for ( let item in replacements )
-                    code = code.replace( replacements[ item ], replacer );
+                    content = content.replace( replacements[ item ], replacer );
 
-            return { code };
+            return { code: content };
         }
     };
 };
