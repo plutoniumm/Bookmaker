@@ -28,7 +28,7 @@ const Workinate = () => {
     return {
         markup ( { content } ) {
             if (
-                content.includes( 'scope="worker"' ) &&
+                content.includes( 'scope="workered"' ) &&
                 !( content.includes( 'IFC-WORKER-MOUNTED' ) )
             ) {
                 const ast = parse( content );

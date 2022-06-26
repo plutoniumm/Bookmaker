@@ -6,7 +6,7 @@
     });
 </script>
 
-<script scope="worker">
+<script scope="workered">
     console.log(222);
 
     return 4456;
