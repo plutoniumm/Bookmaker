@@ -1,5 +1,6 @@
 import { markdown } from 'svelte-preprocess-markdown';
 // PreProcessors
+import path from 'path';
 import statix from "@sveltejs/adapter-static";
 import autoProcess from "svelte-preprocess";
 import AutoImport from "unplugin-auto-import/vite";
@@ -8,7 +9,6 @@ import { replaceCodePlugin } from "vite-plugin-replace";
 import ALIASES from "./config/alias.js";
 import Workinate from "./config/WorkerScript.js";
 import { Katexer } from "./config/md.js";
-import REPLACE from "./config/replace.json" assert { type: "json" };
 import AUTO_IMPORTS from "./config/auto-import.json" assert { type: "json" };
 
 const config = {
@@ -27,7 +27,14 @@ const config = {
 		} ),
 		vite: {
 			plugins: [
-				replaceCodePlugin( { replacements: REPLACE } ),
+				replaceCodePlugin( {
+					replacements: {
+						"@templates": path.resolve( "src/template" ),
+						"@global": path.resolve( "src/global" ),
+						"@components": path.resolve( "src/components" ),
+						"@data": path.resolve( "src/data" )
+					}
+				} ),
 				AutoImport( {
 					include: [
 						/\.[tj]sx?$/, // .ts, .tsx, .js, .jsx

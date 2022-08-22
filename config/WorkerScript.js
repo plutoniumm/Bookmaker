@@ -1,6 +1,6 @@
 import { parse } from 'html5parser';
 import { walk } from "svelte/compiler";
-import { replace, isScript, dedupe } from "./lib/svelte.js";
+import { replace, isScript, dedupe } from "./lib.js";
 
 const scopes = [
     {
