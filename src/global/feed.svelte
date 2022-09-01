@@ -9,7 +9,9 @@
 
         return Math.abs(months) + 1;
     };
-    const current = getMonthCount();
+
+    // const current = getMonthCount();
+    const current = 1;
 </script>
 
 <section>

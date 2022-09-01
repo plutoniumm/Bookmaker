@@ -22,6 +22,7 @@ export const processPost = ( data ) => {
     let {
         source = {},
         name = "",
+        href = "#",
         description = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, explicabo. Voluptas dignissimos obcaecati necessitatibus ipsa? Doloribus error sint maiores culpa?",
         image = "",
         tag = "math",
@@ -33,9 +34,7 @@ export const processPost = ( data ) => {
 
     if ( source.type.toLowerCase().includes( 'youtube' ) ) {
         image = `http://img.youtube.com/vi/${ source.id }/maxresdefault.jpg`;
-        iframe = {
-            url: `https://www.youtube-nocookie.com/embed/${ source.id }`,
-        };
+        href = `https://www.youtube-nocookie.com/embed/${ source.id }`
     }
 
     return {
@@ -44,6 +43,7 @@ export const processPost = ( data ) => {
         iframe,
         description,
         image,
+        href,
         tag: getTag( tag ),
         date
     };

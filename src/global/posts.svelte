@@ -13,7 +13,7 @@
             </div>
             <img
                 width="100px"
-                src="@icons:sys/archive.svg"
+                src="/icons/internal/archive.svg"
                 alt="Infinity Symbol"
             />
         </div>

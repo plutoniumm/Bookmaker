@@ -4,7 +4,7 @@
 
     import { processPost } from "$lib/feed";
 
-    const { source, name, description, image, iframe, tag } = processPost(data);
+    const { source, name, description, image, href, tag } = processPost(data);
 </script>
 
 <article class="shadow rx10 m10 p20 fade-right bgf">
@@ -16,17 +16,9 @@
         <p>{description}</p>
     </header>
     <div>
-        {#if iframe}
-            <iframe
-                title="External Site"
-                class="w-100 hero rx5"
-                src={iframe.url}
-                frameborder="0"
-                allowfullscreen
-            />
-        {:else}
+        <a {href}>
             <img class="w-100 hero rx5" src={image} alt="" />
-        {/if}
+        </a>
         <h1 class="p0 m0">{name}</h1>
     </div>
 </article>

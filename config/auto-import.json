@@ -6,12 +6,6 @@
         ],
         "svelte/store": [
             "writable"
-        ],
-        "workered": [
-            [
-                "default",
-                "workered"
-            ]
         ]
     }
 ]

@@ -9,7 +9,7 @@
         rel="external"
         {href}
         class="ƒ-col shadow cont rx5 fade-right"
-        sveltekit:prefetch
+        data-sveltekit-prefetch
     >
         <slot />
     </a>
