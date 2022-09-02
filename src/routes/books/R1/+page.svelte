@@ -84,7 +84,7 @@
     }
     img {
         height: auto;
-        max-height: 300px;
+        max-height: 200px;
         aspect-ratio: 1 !important;
         margin-right: 10px;
         object-fit: cover;
