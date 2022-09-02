@@ -1,5 +1,6 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import mdx from '@mdx-js/rollup';
+import dsv from '@rollup/plugin-dsv';
 // Preproces
 import autoProcess from "svelte-preprocess";
 import AutoImport from "unplugin-auto-import/vite";
@@ -28,6 +29,7 @@ const config = {
 			vueTemplate: false,
 		} ),
 		mdx( options ),
+		dsv(),
 		sveltekit(),
 	],
 	resolve: { alias: ALIASES },

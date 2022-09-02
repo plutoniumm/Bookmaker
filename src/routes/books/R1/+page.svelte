@@ -1,0 +1,103 @@
+<script>
+    import Chip from "@components/chip.svelte";
+    function chunk(array, sz) {
+        let R = [];
+        for (let i = 0; i < array.length; i += sz)
+            R.push(array.slice(i, i + sz));
+        return R;
+    }
+    const anyIncludes = (strings, text) =>
+        strings.some((string) =>
+            string?.toLowerCase()?.includes(text.toLowerCase())
+        );
+
+    export let data;
+
+    let search = "";
+</script>
+
+<a
+    href="#"
+    class="rx10 m5 p-fix fw7"
+    style="bottom:1rem;right:1rem;background:var(--theme);color:#fff;font-size:2.5em;padding:0 20px 10px 20px;z-index:33"
+>
+    &uarr;
+</a>
+<h1 class="†c w-100">Round 1: The 100</h1>
+<input
+    type="text"
+    class="rpm-5"
+    bind:value={search}
+    placeholder="Search by Book/Auth..."
+/>
+{#each chunk(data.books, 20).slice(0, 6) as part}
+    <div class="section mx-a w-100 ƒ ƒ∑ ∆-ar">
+        {#each part.filter( (e) => anyIncludes([e.name, e.author, e.description], search) ) as book}
+            {@const { OLID, again, author, name, description, tags, cover } =
+                book}
+            <div id={OLID} class="book ƒ rpm-5 p-rel">
+                {#if cover != 0}
+                    <img
+                        class="rx5"
+                        src={`https://covers.openlibrary.org/b/id/${cover}-M.jpg`}
+                        alt={name}
+                    />
+                {:else}
+                    <img class="rx5" src="/icons/if.svg" alt={name} />
+                {/if}
+                <div class="w-100 ƒ-col ∆-bw">
+                    <div>
+                        <span class="fw6">{name} - <i>{author}</i></span> <br />
+                        <p>
+                            {description}
+                        </p>
+                    </div>
+                    <div class="tags ƒ" style="justify-content:end">
+                        {#if tags === "®"}
+                            <Chip color="green" text="Recommended" />
+                        {:else if tags.includes("MORE")}
+                            <Chip color="blue">
+                                <a href={tags.split("::")[1].trim()}>See More</a
+                                >
+                            </Chip>
+                        {:else if tags != 0}
+                            {tags}
+                        {/if}
+
+                        {#if again.toLowerCase() === "yes"}
+                            <Chip color="yellow" text="Very Dense" />
+                        {:else if again.toLowerCase() === "maybe"}
+                            <Chip color="yellow" text="Dense" />
+                        {/if}
+                    </div>
+                </div>
+            </div>
+        {/each}
+    </div>
+{/each}
+
+<style lang="scss">
+    input {
+        background: #fff;
+        font-size: 1.25rem;
+        width: calc(100% - 20px);
+    }
+    img {
+        height: auto;
+        max-height: 300px;
+        aspect-ratio: 1 !important;
+        margin-right: 10px;
+        object-fit: cover;
+    }
+    .book {
+        z-index: 1;
+        background: #fff;
+        width: calc(50% - 20px);
+    }
+
+    @media (max-width: 768px) {
+        .book {
+            width: 100%;
+        }
+    }
+</style>
