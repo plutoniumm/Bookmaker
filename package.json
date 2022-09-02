@@ -12,7 +12,7 @@
     "new": "sh ./scripts/new.sh"
   },
   "devDependencies": {
-    "@rollup/plugin-dsv": "^2.0.3",
+    "@rollup/plugin-dsv": "2.0.3",
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
     "node-sass": "7.0.1",
