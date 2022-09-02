@@ -1,6 +1,6 @@
 {
   "node_modules/.pnpm/@sveltejs+kit@1.0.0-next.463_fhgkwirxvgjw2igda6zmhiisma/node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-70c27da2.js",
+    "file": "_app/immutable/start-18e7961d.js",
     "src": "node_modules/.pnpm/@sveltejs+kit@1.0.0-next.463_fhgkwirxvgjw2igda6zmhiisma/node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -197,20 +197,20 @@
     "file": "_app/immutable/assets/_layout-be0e98a9.css",
     "src": "src/routes/+layout.css"
   },
-  "src/routes/[slug]/+page.css": {
-    "file": "_app/immutable/assets/_page-1ff05377.css",
-    "src": "src/routes/[slug]/+page.css"
+  "src/routes/+error.css": {
+    "file": "_app/immutable/assets/_error-125d203c.css",
+    "src": "src/routes/+error.css"
   },
   "src/routes/+page.css": {
     "file": "_app/immutable/assets/_page-5aebba9a.css",
     "src": "src/routes/+page.css"
   },
-  "src/routes/+error.css": {
-    "file": "_app/immutable/assets/_error-125d203c.css",
-    "src": "src/routes/+error.css"
-  },
   "src/routes/[slug]/+layout.css": {
     "file": "_app/immutable/assets/_layout-d8cf1152.css",
     "src": "src/routes/[slug]/+layout.css"
+  },
+  "src/routes/[slug]/+page.css": {
+    "file": "_app/immutable/assets/_page-1ff05377.css",
+    "src": "src/routes/[slug]/+page.css"
   }
 }
