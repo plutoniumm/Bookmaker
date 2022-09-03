@@ -18,7 +18,7 @@
     "node-sass": "7.0.1",
     "svelte": "3.50.0",
     "svelte-preprocess": "4.10.7",
-    "unplugin-auto-import": "0.11.1"
+    "unplugin-auto-import": "0.11.2"
   },
   "dependencies": {
     "@mdx-js/mdx": "2.1.3",
