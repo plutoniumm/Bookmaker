@@ -1,7 +1,7 @@
 {
-  "node_modules/.pnpm/@sveltejs+kit@1.0.0-next.463_qevq5tvhizyxp44gfhkn6m3ljq/node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-94d180da.js",
-    "src": "node_modules/.pnpm/@sveltejs+kit@1.0.0-next.463_qevq5tvhizyxp44gfhkn6m3ljq/node_modules/@sveltejs/kit/src/runtime/client/start.js",
+  "node_modules/.pnpm/@sveltejs+kit@1.0.0-next.464_tqsk4he7hsj5ptovw3sfpzsuyu/node_modules/@sveltejs/kit/src/runtime/client/start.js": {
+    "file": "_app/immutable/start-112dc0b2.js",
+    "src": "node_modules/.pnpm/@sveltejs+kit@1.0.0-next.464_tqsk4he7hsj5ptovw3sfpzsuyu/node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_preload-helper-aa6bc0ce.js",
@@ -238,6 +238,10 @@
     "file": "_app/immutable/assets/_error-125d203c.css",
     "src": "src/routes/+error.css"
   },
+  "src/routes/+page.css": {
+    "file": "_app/immutable/assets/_page-5aebba9a.css",
+    "src": "src/routes/+page.css"
+  },
   "src/routes/[slug]/+page.css": {
     "file": "_app/immutable/assets/_page-1ff05377.css",
     "src": "src/routes/[slug]/+page.css"
@@ -245,9 +249,5 @@
   "src/routes/books/R1/+page.css": {
     "file": "_app/immutable/assets/_page-339ec7e5.css",
     "src": "src/routes/books/R1/+page.css"
-  },
-  "src/routes/+page.css": {
-    "file": "_app/immutable/assets/_page-5aebba9a.css",
-    "src": "src/routes/+page.css"
   }
 }
