@@ -1,1 +1,1 @@
-import{_ as m}from"./_page-c60853fe.js";import{default as a}from"../components/pages/_page.svelte-cc79ff8c.js";import"./index-23535c31.js";import"./katex-63d67c62.js";export{a as component,m as shared};
+import{_ as r}from"./_page-c60853fe.js";import{default as t}from"../components/pages/_page.svelte-cc79ff8c.js";export{t as component,r as shared};
