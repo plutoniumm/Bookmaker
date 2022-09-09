@@ -16,13 +16,7 @@
     let search = "";
 </script>
 
-<a
-    href="#"
-    class="rx10 m5 p-fix fw7"
-    style="bottom:1rem;right:1rem;background:var(--theme);color:#fff;font-size:2.5em;padding:0 20px 10px 20px;z-index:33"
->
-    &uarr;
-</a>
+<a href="#" class="rx10 m5 p-fix fw7"> &uarr; </a>
 <h1 class="†c w-100">Round 1: The 100</h1>
 <input
     type="text"
@@ -30,14 +24,15 @@
     bind:value={search}
     placeholder="Search by Book/Auth..."
 />
-{#each chunk(data.books, 20).slice(0, 6) as part}
+{#each chunk(data.books, 20).slice(0, 6) as part, series}
     <div class="section mx-a w-100 ƒ ƒ∑ ∆-ar">
-        {#each part.filter( (e) => anyIncludes([e.name, e.author, e.description], search) ) as book}
+        {#each part.filter( (e) => anyIncludes([e.name, e.author, e.description], search) ) as book, index}
             {@const { OLID, again, author, name, description, tags, cover } =
                 book}
             <div id={OLID} class="book ƒ rpm-5 p-rel">
                 {#if cover != 0}
                     <img
+                        id={`R01${series * 20 + index}`}
                         class="rx5"
                         src={`https://covers.openlibrary.org/b/id/${cover}-M.jpg`}
                         alt={name}
@@ -77,6 +72,15 @@
 {/each}
 
 <style lang="scss">
+    a {
+        bottom: 1rem;
+        right: 1rem;
+        background: var(--theme);
+        color: #fff;
+        font-size: 2.5em;
+        padding: 0 20px 10px 20px;
+        z-index: 33;
+    }
     input {
         background: #fff;
         font-size: 1.25rem;
@@ -97,7 +101,12 @@
 
     @media (max-width: 768px) {
         .book {
-            width: 100%;
+            width: calc(100% - 20px);
+            margin: 5px 10px;
+        }
+        img {
+            max-width: 120px;
+            aspect-ratio: 3/4 !important;
         }
     }
 </style>

@@ -8,7 +8,6 @@
     "server": "cd server && vite dev",
     "build": "vite build",
     "build:server": "pnpm i --no-frozen-lockfile && vite build",
-    "git": "sh ./scripts/commit.sh",
     "new": "sh ./scripts/new.sh"
   },
   "devDependencies": {
