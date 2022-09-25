@@ -10,15 +10,15 @@
     "@rollup/plugin-dsv": "2.0.3",
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
-    "node-sass": "7.0.1",
-    "svelte": "3.50.0",
+    "node-sass": "7.0.3",
+    "svelte": "3.50.1",
     "svelte-preprocess": "4.10.7"
   },
   "dependencies": {
     "katex": "0.16.2",
     "predefined": "1.2.5",
-    "rollup": "2.79.0",
-    "unplugin-auto-import": "^0.11.2",
-    "vite": "3.1.0-beta.1"
+    "rollup": "2.79.1",
+    "unplugin-auto-import": "0.11.2",
+    "vite": "3.1.3"
   }
 }
