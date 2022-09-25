@@ -10,7 +10,7 @@ specifiers:
   rollup: 2.79.0
   svelte: 3.50.0
   svelte-preprocess: 4.10.7
-  unplugin-auto-import: ^0.11.2
+  unplugin-auto-import: 0.11.2
   vite: 3.1.0-beta.1
 
 dependencies:
