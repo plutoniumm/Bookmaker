@@ -7,7 +7,7 @@ specifiers:
   katex: 0.16.2
   node-sass: 7.0.1
   predefined: 1.2.5
-  rollup: 2.79.0
+  rollup: 2.79.1
   svelte: 3.50.0
   svelte-preprocess: 4.10.7
   unplugin-auto-import: ^0.11.2
@@ -16,12 +16,12 @@ specifiers:
 dependencies:
   katex: 0.16.2
   predefined: 1.2.5
-  rollup: 2.79.0
-  unplugin-auto-import: 0.11.2_hxuh2psp6sf3262k5l6euz7keq
+  rollup: 2.79.1
+  unplugin-auto-import: 0.11.2_hiwu2kwkafkf4mi437pwkczwle
   vite: 3.1.0-beta.1
 
 devDependencies:
-  '@rollup/plugin-dsv': 2.0.3_rollup@2.79.0
+  '@rollup/plugin-dsv': 2.0.3_rollup@2.79.1
   '@sveltejs/adapter-static': 1.0.0-next.43
   '@sveltejs/kit': 1.0.0-next.503_tqsk4he7hsj5ptovw3sfpzsuyu
   node-sass: 7.0.1
@@ -107,10 +107,10 @@ packages:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
 
-  /@rollup/plugin-dsv/2.0.3_rollup@2.79.0:
+  /@rollup/plugin-dsv/2.0.3_rollup@2.79.1:
     resolution: {integrity: sha512-x2lqNepgPZUwRgNzEK8oTpoN6Y7NEQQl1PHp4gltXuxeJGlu3oyxVuw5gY5+T/LMUyQ9Nvlw6xu/rOC7v9kxPg==}
     dependencies:
-      '@rollup/pluginutils': 3.1.0_rollup@2.79.0
+      '@rollup/pluginutils': 3.1.0_rollup@2.79.1
       '@types/d3-dsv': 1.2.1
       d3-dsv: 1.2.0
       tosource: 1.0.0
@@ -118,7 +118,7 @@ packages:
       - rollup
     dev: true
 
-  /@rollup/pluginutils/3.1.0_rollup@2.79.0:
+  /@rollup/pluginutils/3.1.0_rollup@2.79.1:
     resolution: {integrity: sha512-GksZ6pr6TpIjHm8h9lSQ8pi8BE9VeubNT0OMJ3B5uZJ8pz73NPiqOtCog/x2/QzM1ENChPKxMDhiQuRHsqc+lg==}
     engines: {node: '>= 8.0.0'}
     peerDependencies:
@@ -127,7 +127,7 @@ packages:
       '@types/estree': 0.0.39
       estree-walker: 1.0.1
       picomatch: 2.3.1
-      rollup: 2.79.0
+      rollup: 2.79.1
     dev: true
 
   /@rollup/pluginutils/4.2.1:
@@ -1978,8 +1978,8 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
 
-  /rollup/2.79.0:
-    resolution: {integrity: sha512-x4KsrCgwQ7ZJPcFA/SUu6QVcYlO7uRLfLAy0DSA4NS2eG8japdbpM50ToH7z4iObodRYOJ0soneF0iaQRJ6zhA==}
+  /rollup/2.79.1:
+    resolution: {integrity: sha512-uKxbd0IhMZOhjAiD5oAFp7BqvkA4Dv47qpOCtaNvng4HBwdbWtdOh8f5nZNuk2rp51PMGk3bzfWu5oayNEuYnw==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -2400,7 +2400,7 @@ packages:
     engines: {node: '>=12.18'}
     dev: true
 
-  /unimport/0.6.7_hxuh2psp6sf3262k5l6euz7keq:
+  /unimport/0.6.7_hiwu2kwkafkf4mi437pwkczwle:
     resolution: {integrity: sha512-EMoVqDjswHkU+nD098QYHXH7Mkw7KwGDQAyeRF2lgairJnuO+wpkhIcmCqrD1OPJmsjkTbJ2tW6Ap8St0PuWZA==}
     dependencies:
       '@rollup/pluginutils': 4.2.1
@@ -2412,7 +2412,7 @@ packages:
       pathe: 0.3.5
       scule: 0.3.2
       strip-literal: 0.4.0
-      unplugin: 0.9.5_hxuh2psp6sf3262k5l6euz7keq
+      unplugin: 0.9.5_hiwu2kwkafkf4mi437pwkczwle
     transitivePeerDependencies:
       - esbuild
       - rollup
@@ -2432,7 +2432,7 @@ packages:
       imurmurhash: 0.1.4
     dev: true
 
-  /unplugin-auto-import/0.11.2_hxuh2psp6sf3262k5l6euz7keq:
+  /unplugin-auto-import/0.11.2_hiwu2kwkafkf4mi437pwkczwle:
     resolution: {integrity: sha512-1+VwBfn9dtiYv9SQLKP1AvZolUbK9xTVeAT+iOcEk4EHSFUlmIqBVLEKI76cifSQTLOJ3rZyPrEgptf3SZNLlQ==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -2445,8 +2445,8 @@ packages:
       '@rollup/pluginutils': 4.2.1
       local-pkg: 0.4.2
       magic-string: 0.26.3
-      unimport: 0.6.7_hxuh2psp6sf3262k5l6euz7keq
-      unplugin: 0.9.5_hxuh2psp6sf3262k5l6euz7keq
+      unimport: 0.6.7_hiwu2kwkafkf4mi437pwkczwle
+      unplugin: 0.9.5_hiwu2kwkafkf4mi437pwkczwle
     transitivePeerDependencies:
       - esbuild
       - rollup
@@ -2454,7 +2454,7 @@ packages:
       - webpack
     dev: false
 
-  /unplugin/0.9.5_hxuh2psp6sf3262k5l6euz7keq:
+  /unplugin/0.9.5_hiwu2kwkafkf4mi437pwkczwle:
     resolution: {integrity: sha512-luraheyfxwtvkvHpsOvMNv7IjLdORTWKZp0gWYNHGLi2ImON3iIZOj464qEyyEwLA/EMt12fC415HW9zRpOfTg==}
     peerDependencies:
       esbuild: '>=0.13'
@@ -2473,7 +2473,7 @@ packages:
     dependencies:
       acorn: 8.8.0
       chokidar: 3.5.3
-      rollup: 2.79.0
+      rollup: 2.79.1
       vite: 3.1.0-beta.1
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.4.4
