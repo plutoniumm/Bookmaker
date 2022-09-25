@@ -1,9 +1,9 @@
 <section>
-	<h2>
+	<h3>
 		What's Happening?: This page is for testing of web features and not for
 		usage. This is a remenant of the first ever large scale project I
 		created.
-	</h2>
+	</h3>
 	<a class="p10 rx10 " href="/R1">Round 1</a>
 	<!-- <a href="/R2">R2</a> -->
 </section>
