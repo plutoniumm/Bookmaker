@@ -4,7 +4,7 @@
 		usage. This is a remenant of the first ever large scale project I
 		created.
 	</h3>
-	<a class="p10 rx10 bgf" href="/R1">Round 1</a>
+	<a class="p10 rx5 bgf" href="/R1">Round 1</a>
 	<!-- <a href="/R2">R2</a> -->
 </section>
 
