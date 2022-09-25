@@ -1,5 +1,4 @@
 <script>
-    import Head from "@components/head.svelte";
     import Chip from "@components/chip.svelte";
     function chunk(array, sz) {
         let R = [];
@@ -17,7 +16,10 @@
     let search = "";
 </script>
 
-<Head title="Round 1" description="The First 100: A lockdown Saga" />
+<title>Round 1 | i!</title>
+<meta name="title" content="Round 1" />
+<meta name="description" content="The First 100: A lockdown Saga" />
+
 <a href="#" class="rx10 m5 p-fix fw7"> &uarr; </a>
 <h1 class="†c w-100">Round 1: The 100</h1>
 <input
