@@ -1,23 +1,22 @@
-<script>
-	import Feed from "@global/feed.svelte";
-	import Posts from "@global/posts.svelte";
-
-	export let data;
-</script>
-
-<title />
-
 <section>
-	<h1>What's Happening?</h1>
 	<h2>
-		This page is for testing of web features and not for usage. The Links
-		don't work.
+		What's Happening?: This page is for testing of web features and not for
+		usage. This is a remenant of the first ever large scale project I
+		created.
 	</h2>
-	<Posts posts={data.posts} />
-	<hr class="w-50 o-25" style="margin: 3rem auto;" />
-	<h1>Feed</h1>
-	<Feed />
+	<a class="p10 rx10 " href="/R1">Round 1</a>
+	<!-- <a href="/R2">R2</a> -->
 </section>
 
-<style>
+<style lang="scss">
+	a {
+		max-width: 100px;
+		background: #fff;
+		display: block;
+		border: 1px solid transparent;
+		transition: all 0.1s ease;
+		&:hover {
+			border: 1px solid var(--theme);
+		}
+	}
 </style>

@@ -77,8 +77,8 @@
         right: 1rem;
         background: var(--theme);
         color: #fff;
-        font-size: 2.5em;
-        padding: 0 20px 10px 20px;
+        font-size: 2em;
+        padding: 0 15px 7px 15px;
         z-index: 33;
     }
     input {
