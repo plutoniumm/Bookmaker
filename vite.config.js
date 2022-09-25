@@ -6,7 +6,6 @@ import autoProcess from "svelte-preprocess";
 import AutoImport from "unplugin-auto-import/vite";
 
 const config = {
-	extensions: [ ".svelte", ".svelte.md", ".mdx", ".svx" ],
 	preprocess: [ autoProcess( { sourceMap: false } ) ],
 	plugins: [
 		AutoImport( {
@@ -17,10 +16,6 @@ const config = {
 			imports: {
 				"svelte": [
 					"onMount",
-					"createEventDispatcher"
-				],
-				"svelte/store": [
-					"writable"
 				]
 			},
 			vueTemplate: false,
