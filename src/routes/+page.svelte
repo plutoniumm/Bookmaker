@@ -1,3 +1,11 @@
+<script>
+	import Head from "@components/head.svelte";
+</script>
+
+<Head
+	title="Books"
+	description="Effectively a very badly made and yet overengineered Excel Sheet"
+/>
 <section>
 	<h3>
 		What's Happening?: This page is for testing of web features and not for
