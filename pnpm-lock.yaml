@@ -5,7 +5,7 @@ specifiers:
   '@sveltejs/adapter-static': next
   '@sveltejs/kit': next
   katex: 0.16.2
-  node-sass: 7.0.1
+  node-sass: 7.0.3
   predefined: 1.2.5
   rollup: 2.79.0
   svelte: 3.50.0
@@ -24,9 +24,9 @@ devDependencies:
   '@rollup/plugin-dsv': 2.0.3_rollup@2.79.0
   '@sveltejs/adapter-static': 1.0.0-next.43
   '@sveltejs/kit': 1.0.0-next.503_tqsk4he7hsj5ptovw3sfpzsuyu
-  node-sass: 7.0.1
+  node-sass: 7.0.3
   svelte: 3.50.0
-  svelte-preprocess: 4.10.7_7u3uq7tdnf6p6b64s35pbkc2vm
+  svelte-preprocess: 4.10.7_fqetxj4motq43yxesdsmxpvuzi
 
 packages:
 
@@ -1038,7 +1038,7 @@ packages:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 3.0.8
+      minimatch: 3.1.2
       once: 1.4.0
       path-is-absolute: 1.0.1
     dev: true
@@ -1625,8 +1625,8 @@ packages:
       - supports-color
     dev: true
 
-  /node-sass/7.0.1:
-    resolution: {integrity: sha512-uMy+Xt29NlqKCFdFRZyXKOTqGt+QaKHexv9STj2WeLottnlqZEEWx6Bj0MXNthmFRRdM/YwyNo/8Tr46TOM0jQ==}
+  /node-sass/7.0.3:
+    resolution: {integrity: sha512-8MIlsY/4dXUkJDYht9pIWBhMil3uHmE8b/AdJPjmFn1nBx9X9BASzfzmsCy0uCCb8eqI3SYYzVPDswWqSx7gjw==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
@@ -1643,7 +1643,7 @@ packages:
       node-gyp: 8.4.1
       npmlog: 5.0.1
       request: 2.88.2
-      sass-graph: 4.0.0
+      sass-graph: 4.0.1
       stdout-stream: 1.4.1
       true-case-path: 1.0.3
     transitivePeerDependencies:
@@ -2023,19 +2023,19 @@ packages:
       rimraf: 2.7.1
     dev: true
 
-  /sass-graph/4.0.0:
-    resolution: {integrity: sha512-WSO/MfXqKH7/TS8RdkCX3lVkPFQzCgbqdGsmSKq6tlPU+GpGEsa/5aW18JqItnqh+lPtcjifqdZ/VmiILkKckQ==}
+  /sass-graph/4.0.1:
+    resolution: {integrity: sha512-5YCfmGBmxoIRYHnKK2AKzrAkCoQ8ozO+iumT8K4tXJXRVCPf+7s1/9KxTSW3Rbvf+7Y7b4FR3mWyLnQr3PHocA==}
     engines: {node: '>=12'}
     hasBin: true
     dependencies:
       glob: 7.2.3
       lodash: 4.17.21
-      scss-tokenizer: 0.3.0
+      scss-tokenizer: 0.4.3
       yargs: 17.5.1
     dev: true
 
-  /scss-tokenizer/0.3.0:
-    resolution: {integrity: sha512-14Zl9GcbBvOT9057ZKjpz5yPOyUWG2ojd9D5io28wHRYsOrs7U95Q+KNL87+32p8rc+LvDpbu/i9ZYjM9Q+FsQ==}
+  /scss-tokenizer/0.4.3:
+    resolution: {integrity: sha512-raKLgf1LI5QMQnG+RxHz6oK0sL3x3I4FN2UDLqgLOGO8hodECNnNh5BXn7fAyBxrA8zVzdQizQ6XjNJQ+uBwMw==}
     dependencies:
       js-base64: 2.6.4
       source-map: 0.7.4
@@ -2255,7 +2255,7 @@ packages:
       svelte: 3.50.0
     dev: true
 
-  /svelte-preprocess/4.10.7_7u3uq7tdnf6p6b64s35pbkc2vm:
+  /svelte-preprocess/4.10.7_fqetxj4motq43yxesdsmxpvuzi:
     resolution: {integrity: sha512-sNPBnqYD6FnmdBrUmBCaqS00RyCsCpj2BG58A1JBswNF7b0OKviwxqVrOL/CKyJrLSClrSeqQv5BXNg2RUbPOw==}
     engines: {node: '>= 9.11.2'}
     requiresBuild: true
@@ -2300,7 +2300,7 @@ packages:
       '@types/sass': 1.43.1
       detect-indent: 6.1.0
       magic-string: 0.25.9
-      node-sass: 7.0.1
+      node-sass: 7.0.3
       sorcery: 0.10.0
       strip-indent: 3.0.0
       svelte: 3.50.0
