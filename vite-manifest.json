@@ -1,6 +1,6 @@
 {
   "node_modules/.pnpm/@sveltejs+kit@1.0.0-next.516_svelte@3.52.0+vite@3.1.3/node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-5fec283b.js",
+    "file": "_app/immutable/start-b9d0d30c.js",
     "src": "node_modules/.pnpm/@sveltejs+kit@1.0.0-next.516_svelte@3.52.0+vite@3.1.3/node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
