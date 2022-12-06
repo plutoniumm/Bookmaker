@@ -120,13 +120,13 @@
     "file": "_app/immutable/assets/_layout-cedf6dc0.css",
     "src": "src/routes/+layout.css"
   },
-  "src/routes/+page.css": {
-    "file": "_app/immutable/assets/_page-12fdfad9.css",
-    "src": "src/routes/+page.css"
-  },
   "src/routes/+error.css": {
     "file": "_app/immutable/assets/_error-125d203c.css",
     "src": "src/routes/+error.css"
+  },
+  "src/routes/+page.css": {
+    "file": "_app/immutable/assets/_page-12fdfad9.css",
+    "src": "src/routes/+page.css"
   },
   "src/routes/R1/+page.css": {
     "file": "_app/immutable/assets/_page-25bf98aa.css",
