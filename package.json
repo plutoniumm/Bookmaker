@@ -15,7 +15,7 @@
     "svelte-preprocess": "4.10.7"
   },
   "dependencies": {
-    "katex": "0.16.2",
+    "katex": "0.16.4",
     "predefined": "1.2.5",
     "rollup": "2.79.1",
     "unplugin-auto-import": "0.12.0",

@@ -4,7 +4,7 @@ specifiers:
   '@rollup/plugin-dsv': 2.0.3
   '@sveltejs/adapter-static': next
   '@sveltejs/kit': next
-  katex: 0.16.2
+  katex: 0.16.4
   node-sass: 7.0.3
   predefined: 1.2.5
   rollup: 2.79.1
@@ -14,7 +14,7 @@ specifiers:
   vite: 3.2.0
 
 dependencies:
-  katex: 0.16.2
+  katex: 0.16.4
   predefined: 1.2.5
   rollup: 2.79.1
   unplugin-auto-import: 0.12.0_rollup@2.79.1
@@ -1325,8 +1325,8 @@ packages:
       verror: 1.10.0
     dev: true
 
-  /katex/0.16.2:
-    resolution: {integrity: sha512-70DJdQAyh9EMsthw3AaQlDyFf54X7nWEUIa5W+rq8XOpEk//w5Th7/8SqFqpvi/KZ2t6MHUj4f9wLmztBmAYQA==}
+  /katex/0.16.4:
+    resolution: {integrity: sha512-WudRKUj8yyBeVDI4aYMNxhx5Vhh2PjpzQw1GRu/LVGqL4m1AxwD1GcUp0IMbdJaf5zsjtj8ghP0DOQRYhroNkw==}
     hasBin: true
     dependencies:
       commander: 8.3.0
