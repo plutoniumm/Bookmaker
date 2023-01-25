@@ -1,10 +1,7 @@
 <section>
-	<h3>
-		What's Happening?: This page is for testing of web features and not for
-		usage. This is a remenant of the first ever large scale project I
-		created.
-	</h3>
+	<h3>Idk what to say, there's some reading stuff ok? Its upto you</h3>
 	<a class="p10 rx5 bgf" href="/R1">Round 1</a>
+	<a class="p10 rx5 bgf" href="/R2">Round 2</a>
 	<!-- <a href="/R2">R2</a> -->
 </section>
 

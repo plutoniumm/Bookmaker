@@ -5,11 +5,7 @@ import adapter from '@sveltejs/adapter-static';
 export default {
 	preprocess: sveltePreprocess( { sourceMap: false } ),
 	kit: {
-		adapter: adapter( {
-			pages: 'build',
-			assets: 'build',
-			precompress: true
-		} ),
+		adapter: adapter(),
 		paths: {
 			base: "",
 			assets: ""
