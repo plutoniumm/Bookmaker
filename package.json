@@ -14,7 +14,6 @@
   "dependencies": {
     "@sveltejs/adapter-static": "^1.0.5",
     "@sveltejs/kit": "^1.2.9",
-    "katex": "0.16.2",
     "predefined": "1.2.5",
     "rollup": "2.79.1",
     "sass": "^1.57.1",
