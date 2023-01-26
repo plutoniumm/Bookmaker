@@ -1,4 +1,4 @@
-import R1 from './R1.csv';
+import R1 from '../data/R1.csv';
 
 export const load = async ( { fetch } ) => {
     return {

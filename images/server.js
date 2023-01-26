@@ -10,118 +10,65 @@
 
 import { appendFileSync } from "fs";
 
-const ids = [
-    "OL27711220M",
-    "OL17710047W",
-    "OL19714233W",
-    "OL19331960W",
-    "OL4288870W",
-    "OL27241047M",
-    "OL37826840M",
-    "OL26771429W",
-    "OL28185034M",
-    "OL24217656W",
-    "OL24574391W",
-    "OL16726829W",
-    "OL31829191M",
-    "OL37823270M",
-    "OL17862181W",
-    "OL17930368W",
-    "OL21652283W",
-    "OL17800180W",
-    "OL37822607M",
-    "OL76827W",
-    "OL1168007W",
-    "OL16820830W",
-    "OL26203434W",
-    "OL64468W",
-    "OL28202924M",
-    "OL35299305M",
-    "OL15992072W",
-    "OL24330288M",
-    "OL27804088M",
-    "OL19544745W",
-    "OL20161579W",
-    "OL21674578W",
-    "OL28239356M",
-    "OL5749847W",
-    "OL24557376W",
-    "OL20257238W",
-    "OL20235436W",
-    "OL465748W",
-    "OL31013W",
-    "OL1892624W",
-    "OL272388W",
-    "OL20678178W",
-    "OL1892623W",
-    "OL1183654W",
-    "OL15399674W",
-    "OL9071417M",
-    "OL20892343W",
-    "OL22235242W",
-    "OL85351W",
-    "OL20140592W",
-    "OL23612724W",
-    "OL15118324W",
-    "OL15297392W",
-    "OL26414386M",
-    "OL17641518W",
-    "OL7825951M",
-    "OL514629W",
-    "OL21204625W",
-    "OL26838901W",
-    "OL12926505W",
-    "OL261056W",
-    "OL25182137W",
-    "OL33886062M",
-    "OL7721091M",
-    "OL17924037M",
-    "OL25307289W",
-    "OL24379192W",
-    "OL30857038M",
-    "OL27350689M",
-    "OL38793393M",
-    "OL18147659W",
-    "OL20803380W",
-    "OL23589857W",
-    "OL477829W",
-    "OL24314956W",
-    "OL28010710W",
-    "OL19780150W",
-    "OL21162507W",
-    "OL1954267W",
-    "OL16540234W",
-    "OL23527042W",
-    "OL7358636M",
-    "OL24625670W",
-    "OL27386382M",
-    "OL7285049M",
-    "OL21097926W",
-    "OL30627146M",
-    "OL32681429M",
-    "OL276798W",
-    "OL15118324W",
-    "OL23248426M",
-    "OL8037411W",
-    "OL24260522M",
-    "OL29307673M",
-    "OL17412520W",
-    "OL27555977M",
-    "OL28313034M",
-    "OL1881615W",
-    "OL20934761W",
-    "OL23223452M",
-    "OL11373174W"
-];
+const ids = Object.freeze( [
+    "OL8898482M",
+    "OL32091753M",
+    "OL28370993M",
+    "OL37047220M",
+    "OL28331857M",
+    "OL21594367M",
+    "OL24391629M",
+    "OL28130776M",
+    "OL35678174M",
+    "OL8971647M",
+    "OL30125176M",
+    "OL26554445M",
+    "OL3024629M",
+    "OL35693668M",
+    "OL25082830M",
+    "OL27322193M",
+    "OL23077711M",
+    "OL32760762M",
+    "OL27193250M",
+    "OL32445039M",
+    "OL4554174M",
+    "OL28307932M",
+    "OL25440550M",
+    "OL32289956M",
+    "OL33419549M",
+    "OL24243313W",
+    "OL27404766M",
+    "OL27366070M",
+    "OL35354582M",
+    "OL27206755M",
+    "OL36270783M",
+    "OL25538028M",
+    "OL7590438M",
+    "OL28198631M",
+    "OL31438584M",
+    "OL36583747M",
+    "OL36618901M",
+    "OL35038410M",
+    "OL4569826W",
+    "OL26374794M",
+    "OL30677089M",
+    "OL22661787W",
+    "OL2040840M",
+    "OL32835319M",
+    "OL33055982M",
+    "OL32196580M",
+    "OL27449843M",
+    "OL36665710M",
+    "OL26327044M",
+    "OL25648567M",
+] );
 
-const urls = [
-    ( id ) => ( `https://openlibrary.org/works/${ id }.json` )
-];
+const openlib = ( id ) => ( `https://openlibrary.org/works/${ id }.json` )
 
 async function* getData () {
     let id = 0;
     while ( true ) {
-        const url = urls[ 0 ]( ids[ id++ ] );
+        const url = openlib( ids[ id++ ] );
         const data = await fetch( url ).then( r => r.json() );
 
         yield data;
@@ -130,24 +77,23 @@ async function* getData () {
 
 const map = ( i, data ) => {
     const cover = data.covers ? data.covers[ 0 ] : null;
-    const d = {
+    return {
         index: i,
         id: ids[ i ],
         title: data.title.split( "[" )[ 0 ].trim(),
-        cover: cover > 1000 ? cover : null,
+        cover: cover > 100 ? cover : null,
         pubDate: +new Date( data.publish_date )
     };
-    return d;
 };
 
 
-appendFileSync( "./images/images.txt", `id;title;coverId` );
+appendFileSync( "./R2Imgs.csv", `id;title;coverId\n` );
 ids.slice( 0, 101 ).forEach( async ( e, i ) => {
     const data = await gen.next();
     const c = map( i, data.value );
     console.log( c );
 
-    if ( c.cover === null ) appendFileSync( "./images/errors.txt", c.id + '\n' );
+    if ( c.cover === null ) appendFileSync( "./errors.txt", c.id + '\n' );
     const logged = `${ c.id };${ c.title };${ c.cover }\n`;
-    appendFileSync( "./images/images.txt", logged );
+    appendFileSync( "./R2Imgs.csv", logged );
 } );

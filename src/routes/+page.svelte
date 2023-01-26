@@ -1,7 +1,10 @@
 <section>
 	<h3>Idk what to say, there's some reading stuff ok? Its upto you</h3>
-	<a class="p10 rx5 bgf" href="/R1">Round 1</a>
-	<a class="p10 rx5 bgf" href="/R2">Round 2</a>
+	<br />
+	<div class="ƒ">
+		<a class="rpm-10 bgf" href="/R1">Round 1</a>
+		<a class="rpm-10 bgf" href="/R2">Round 2</a>
+	</div>
 	<!-- <a href="/R2">R2</a> -->
 </section>
 
