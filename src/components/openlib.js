@@ -1,0 +1,1 @@
+export const img = ( cover ) => `https://covers.openlibrary.org/b/id/${ cover }-M.jpg`;

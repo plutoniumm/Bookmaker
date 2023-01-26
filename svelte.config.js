@@ -5,10 +5,9 @@ import adapter from '@sveltejs/adapter-static';
 export default {
 	preprocess: sveltePreprocess( { sourceMap: false } ),
 	kit: {
-		adapter: adapter(),
-		paths: {
-			base: "",
-			assets: ""
-		}
+		alias: {
+			"@components": "/src/components"
+		},
+		adapter: adapter()
 	}
 }

@@ -1,9 +1,11 @@
 <script>
     import Chip from "@components/chip.svelte";
+    import { img } from "@components/openlib.js";
     function chunk(array, sz) {
         let R = [];
         for (let i = 0; i < array.length; i += sz)
             R.push(array.slice(i, i + sz));
+
         return R;
     }
     const anyIncludes = (strings, text) =>
@@ -16,7 +18,7 @@
     let search = "";
 </script>
 
-<title>Round 1 | i!</title>
+<title>Round {data.meta.index} | i!</title>
 <meta name="title" content="Round 1" />
 <meta name="description" content="The First 100: A lockdown Saga" />
 
@@ -35,14 +37,14 @@
                 book}
             <div id={OLID} class="book bgf ƒ rpm-5 p-rel">
                 {#if cover != 0}
+                    <!-- svelte-ignore a11y-missing-attribute -->
                     <img
-                        id={`R01${series * 20 + index}`}
+                        id={`R${data.meta.index}-${series * 20 + index}`}
                         class="rx5"
-                        src={`https://covers.openlibrary.org/b/id/${cover}-M.jpg`}
-                        alt={name}
+                        src={img(cover)}
                     />
                 {:else}
-                    <img class="rx5" src="/icons/if.svg" alt={name} />
+                    <img class="rx5" src="/icons/if.svg" alt="iF Logo" />
                 {/if}
                 <div class="w-100 ƒ-col ∆-bw">
                     <div>
@@ -91,7 +93,7 @@
     }
     img {
         height: auto;
-        max-height: 200px;
+        max-height: 175px;
         aspect-ratio: 1 !important;
         margin-right: 10px;
         object-fit: cover;

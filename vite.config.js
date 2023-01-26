@@ -1,7 +1,5 @@
 import { sveltekit } from '@sveltejs/kit/vite';
-import { resolve } from 'path';
 import dsv from '@rollup/plugin-dsv';
-// Preproces
 import autoProcess from "svelte-preprocess";
 
 const config = {
@@ -10,11 +8,6 @@ const config = {
 		dsv(),
 		sveltekit(),
 	],
-	resolve: {
-		alias: {
-			"@components": resolve( "/src/components" )
-		}
-	},
 	server: { port: 3000 }
 };
 
