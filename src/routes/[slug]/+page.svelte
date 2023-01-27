@@ -29,13 +29,11 @@
     bind:value={search}
     placeholder="Search by Book/Auth..."
 />
-{#each chunk(data.books, 20).slice(0, 6) as part, series}
-    <div class="section mx-a w-100 ƒ ƒ∑ ∆-ar">
-        {#each part.filter( (e) => anyIncludes([e.name, e.author, e.description], search) ) as book, index}
-            <Book {book} {index} />
-        {/each}
-    </div>
-{/each}
+<div class="section mx-a w-100 ƒ ƒ∑ ∆-ar">
+    {#each data.books.filter( (e) => anyIncludes(Object.values(e), search) ) as book, index}
+        <Book {book} {index} />
+    {/each}
+</div>
 
 <style lang="scss">
     a {

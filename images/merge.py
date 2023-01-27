@@ -1,20 +1,20 @@
 import pandas as pd
 import os
 
-print(os.getcwd())
+data1 = pd.read_csv("./R2.csv")  # read csv
+data2 = pd.read_csv("./R2Imgs.csv", sep=";")  # read images
 
-data1 = pd.read_csv("./R2.csv")
-data2 = pd.read_csv("./R2Imgs.csv")
+output = pd.merge(data1, data2, on="OLID", how="outer")
 
-print(data1.head())
-print(data2.head())
-
-
-output4 = pd.merge(data1, data2, on="OLID", how="outer")
-
-output4.drop(["title", "len", "to", "pages"], axis=1, inplace=True)
-
-print(
-    output4.head()
+output.drop(
+    ["title", "Len", "To", "Pages"],  # drop useless headers
+    axis=1, inplace=True, errors='ignore'
 )
-output4.to_csv("R2Final.csv", index=False, na_rep="0")
+
+output.columns = output.columns.str.lower()  # lower case all headings
+# reindex
+# sr,again,olid,author,book,tags,description,coverid
+new_index = {'olid': 'OLID', 'sr': 'index',
+             'book': 'name', 'coverid': 'cover'}
+output.rename(columns=new_index, inplace=True)
+output.to_csv("R2Final.csv", index=False, na_rep="0")

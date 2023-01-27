@@ -2,13 +2,13 @@
   import Chip from "@components/chip.svelte";
   import { img } from "@components/openlib.js";
 
-  export let book, index;
+  export let book;
   const { OLID, again, author, name, description, tags, cover } = book;
 </script>
 
 <div id={OLID} class="book bgf ƒ rpm-5 p-rel">
   <img
-    id={`R${data.meta.index}-${series * 20 + index}`}
+    loading="lazy"
     class="rx5"
     src={cover != 0 ? img(cover) : "/icons/if.svg"}
     alt={name}
