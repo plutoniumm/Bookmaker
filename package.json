@@ -17,6 +17,7 @@
     "predefined": "1.2.5",
     "rollup": "2.79.1",
     "sass": "^1.57.1",
-    "vite": "^4.0.4"
+    "vite": "^4.0.4",
+    "vite-imagetools": "^4.0.17"
   }
 }

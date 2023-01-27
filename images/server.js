@@ -87,7 +87,7 @@ const map = ( i, data ) => {
 };
 
 
-appendFileSync( "./R2Imgs.csv", `id;title;coverId\n` );
+appendFileSync( "./R2Imgs.csv", `OLID;title;coverId\n` );
 ids.slice( 0, 101 ).forEach( async ( e, i ) => {
     const data = await gen.next();
     const c = map( i, data.value );
