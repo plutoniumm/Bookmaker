@@ -10,7 +10,7 @@
   <img
     loading="lazy"
     class="rx5"
-    src={cover != 0 ? img(cover) : "/icons/if.svg"}
+    src={cover !== 0 ? img(cover) : "/icons/if.svg"}
     alt={name}
   />
   <div class="w-100 ƒ-col ∆-bw">
