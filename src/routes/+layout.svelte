@@ -1,12 +1,13 @@
-<nav class="fade-down bgf">
+<nav class="fade-down">
 	<section class="ƒ ∆-ct mx-a">
-		<div class="ƒ fw3 p5" style="font-size:1.5em;color:#aaa;">
+		<div class="ƒ fw4 p5" style="font-size:1.5em;color:#888;">
 			<a href="/">
-				<img height="22px" class="p-rel" src="/icons/if.svg" alt="Logo" />
+				<img height="24px" class="p-rel" src="/icons/if.svg" alt="Logo" />
 				iFactorial: The Bookmaker
 			</a>
 		</div>
 	</section>
+	<hr class="w-50 o-33" />
 </nav>
 
 <main class="">

@@ -1,18 +1,17 @@
 <script>
     import Book from "./book.svelte";
-    function chunk(array, sz) {
-        let R = [];
-        for (let i = 0; i < array.length; i += sz)
-            R.push(array.slice(i, i + sz));
-
-        return R;
-    }
-    const anyIncludes = (strings, text) =>
-        strings.some((string) =>
-            string?.toLowerCase()?.includes(text.toLowerCase())
-        );
+    import Fuse from "fuse.js";
 
     export let data;
+
+    const options = {
+        isCaseSensitive: false,
+        shouldSort: false,
+        minMatchCharLength: 3,
+        useExtendedSearch: false,
+        keys: ["author", "name", "description", "tags"],
+    };
+    const fuse = new Fuse(data.books, options);
 
     let search = "";
 </script>
@@ -30,9 +29,17 @@
     placeholder="Search by Book/Auth..."
 />
 <div class="section mx-a w-100 ƒ ƒ∑ ∆-ar">
-    {#each data.books.filter( (e) => anyIncludes(Object.values(e), search) ) as book, index}
-        <Book {book} {index} />
-    {/each}
+    {#if !search.length}
+        {#each data.books as book, index}
+            <Book {book} {index} />
+        {/each}
+    {:else}
+        {#key search}
+            {#each fuse.search(search) as result}
+                <Book book={result.item} index={result.item.index} />
+            {/each}
+        {/key}
+    {/if}
 </div>
 
 <style lang="scss">

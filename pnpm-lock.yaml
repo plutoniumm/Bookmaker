@@ -7,6 +7,9 @@ dependencies:
   '@sveltejs/kit':
     specifier: ^1.2.9
     version: 1.2.9(svelte@3.58.0)(vite@4.0.4)
+  fuse.js:
+    specifier: ^6.6.2
+    version: 6.6.2
   predefined:
     specifier: 1.2.5
     version: 1.2.5
@@ -16,6 +19,9 @@ dependencies:
   sass:
     specifier: ^1.57.1
     version: 1.57.1
+  thumbhash:
+    specifier: ^0.1.1
+    version: 0.1.1
   vite:
     specifier: ^4.0.4
     version: 4.0.4(sass@1.57.1)
@@ -629,6 +635,11 @@ packages:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
     dev: false
 
+  /fuse.js@6.6.2:
+    resolution: {integrity: sha512-cJaJkxCCxC8qIIcPBF9yGxY0W/tVZS3uEISDxhYIdtk8OL93pe+6Zj7LjCqVV4dzbqcriOZ+kQ/NE4RXZHsIGA==}
+    engines: {node: '>=10'}
+    dev: false
+
   /github-from-package@0.0.0:
     resolution: {integrity: sha512-SyHy3T1v2NUXn29OsWdxmK6RwHD+vkj3v8en8AOBZ1wBQ/hCAQ5bAQTD02kW4W9tUp/3Qh6J8r9EvntiyCmOOw==}
     dev: false
@@ -1184,6 +1195,10 @@ packages:
       fs-constants: 1.0.0
       inherits: 2.0.4
       readable-stream: 3.6.0
+    dev: false
+
+  /thumbhash@0.1.1:
+    resolution: {integrity: sha512-kH5pKeIIBPQXAOni2AiY/Cu/NKdkFREdpH+TLdM0g6WA7RriCv0kPLgP731ady67MhTAqrVG/4mnEeibVuCJcg==}
     dev: false
 
   /tiny-glob@0.2.9:

@@ -1,17 +1,18 @@
 <script>
     export let //
         color = "green",
-        text = null;
+        text = null,
+        style = "",
+        className = "";
 
-    // COlor Scheme: https://www.material-tailwind.com/docs/html/chip
-    let style = "";
+    // Color Scheme: https://www.material-tailwind.com/docs/html/chip
     if (color === "red") style += `--bg:#ffcdd2;--col:#f44336;`;
     if (color === "blue") style += `--bg:#bbdefb;--col:#2196f3;`;
     if (color === "green") style += `--bg:#c8e6c9;--col:#4caf50;`;
     if (color === "yellow") style += `--bg:#ffe0b2;--col:#ff9800;`;
 </script>
 
-<div class="chip rx10 m5 fw5" {style}>
+<div class="chip rx10 m5 fw5 {className}" {style}>
     {#if text}
         {text}
     {:else}
