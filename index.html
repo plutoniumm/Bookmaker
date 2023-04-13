@@ -18,7 +18,7 @@
 		}
 
 		body {
-			background: #f5f5f7;
+			z-index: -20;
 			-webkit-font-smoothing: antialiased;
 			color: rgb(29, 29, 31);
 			font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue",
@@ -27,6 +27,23 @@
 			font-synthesis: none;
 			font-weight: 400;
 			letter-spacing: 0.23px;
+			background: #ebd5b3;
+		}
+
+		body::before {
+			z-index: -10;
+			background: url(/noise.webp);
+			background-repeat: repeat;
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			content: "";
+		}
+
+		main {
+			z-index: 1;
 		}
 
 		.shadow {
@@ -35,30 +52,31 @@
 		}
 
 		.bgf {
-			background: #fff;
+			background: #fff8;
 		}
 	</style>
 
 	<meta http-equiv="content-security-policy" content="">
 		<link href="./_app/immutable/assets/_layout-0492301c.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/_page-9f109e1e.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-b22626f6.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-fb8f9931.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-2946c0e6.js">
+		<link rel="modulepreload" href="./_app/immutable/start-f0a10cd5.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-49912e08.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-dc7da595.js">
 		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-a7df43ed.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-f963f60c.js">
 </head>
 
 <body xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<main>
 
 
-<nav class="fade-down bgf svelte-1vvwlgq"><section class="ƒ ∆-ct mx-a svelte-1vvwlgq"><div class="ƒ fw3 p5" style="font-size:1.5em;color:#aaa;"><a href="/" class="svelte-1vvwlgq"><img height="22px" class="p-rel svelte-1vvwlgq" src="/icons/if.svg" alt="Logo">
+<nav class="fade-down svelte-1vvwlgq"><section class="ƒ ∆-ct mx-a svelte-1vvwlgq"><div class="ƒ fw4 p5" style="font-size:1.5em;color:#444;"><a href="/" class="svelte-1vvwlgq"><img height="24px" class="p-rel svelte-1vvwlgq" src="/icons/if.svg" alt="Logo">
 				iFactorial: The Bookmaker
-			</a></div></section></nav>
+			</a></div></section>
+	<hr class="w-50 o-33"></nav>
 
-<main class=" svelte-1vvwlgq"><section><h3>Idk what to say, there&#39;s some reading stuff ok? Its upto you</h3>
+<main class=" svelte-1vvwlgq"><section><h3>Reading List by Year</h3>
 	<br>
 	<div class="ƒ"><a class="rpm-10 bgf ƒ-col svelte-1ehk68d" href="/R1"><div class="p20 ƒ-col ∆-ct fw1 year svelte-1ehk68d">2021</div>
 				<div class="†c name p5 svelte-1ehk68d">Round 1</div>
@@ -67,20 +85,24 @@
 			</a><a class="rpm-10 bgf ƒ-col svelte-1ehk68d" href="/R3"><div class="p20 ƒ-col ∆-ct fw1 year svelte-1ehk68d">2023</div>
 				<div class="†c name p5 svelte-1ehk68d">Round 3</div>
 			</a></div>
-	
+	<ul><li>I am considering making a global search since it might be useful to look
+			for all books by a particular author or all books with a particular tag
+			across years.
+		</li>
+		<li>Also yes. I actually did not read anything till 2020.</li></ul>
 </section></main>
 
 
 
 
-		<script type="module" data-sveltekit-hydrate="542051">
-			import { start } from "./_app/immutable/start-b22626f6.js";
+		<script type="module" data-sveltekit-hydrate="8fjif7">
+			import { start } from "./_app/immutable/start-f0a10cd5.js";
 
 			start({
 				env: {},
 				paths: {"assets":"","base":""},
-				target: document.querySelector('[data-sveltekit-hydrate="542051"]').parentNode,
-				version: "1680410470671",
+				target: document.querySelector('[data-sveltekit-hydrate="8fjif7"]').parentNode,
+				version: "1681405461340",
 				hydrate: {
 					node_ids: [0, 2],
 					data: [null,null],
