@@ -14,14 +14,19 @@
     const fuse = new Fuse(data.books, options);
 
     let search = "";
+
+    const round = data.meta.index;
 </script>
 
-<title>Round {data.meta.index} | i!</title>
-<meta name="title" content="Round 1" />
-<meta name="description" content="The First 100: A lockdown Saga" />
+<title>Round {round} | i!</title>
+<meta name="title" content="Round {round}" />
+<meta
+    name="description"
+    content={`List of readings in the year ${2020 + round}`}
+/>
 
-<a href="#" class="rx10 m5 p-fix fw7"> &uarr; </a>
-<h1 class="†c w-100">Round {data.meta.index}</h1>
+<a href="#top" class="rx10 m5 p-fix fw7"> &uarr; </a>
+<h1 id="top" class="†c w-100">Round {round}</h1>
 <input
     type="text"
     class="rpm-5 bgf"

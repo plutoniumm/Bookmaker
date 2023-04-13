@@ -3,7 +3,7 @@
   import Chip from "@components/chip.svelte";
   import { img } from "@components/openlib.js";
 
-  export let book;
+  export let book, index;
   const { OLID, again, author, name, description, tags, cover } = book;
 </script>
 
@@ -22,7 +22,7 @@
   </View>
   <div class="w-100 ƒ-col ∆-bw">
     <div>
-      <span class="fw6">{name} <i>- {author}</i></span> <br />
+      <span class="fw6">{index + 1}. {name} <i>- {author}</i></span> <br />
       <p>{description}</p>
     </div>
     <div class="tags ƒ" style="justify-content:end">

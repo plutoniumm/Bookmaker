@@ -19,9 +19,6 @@ dependencies:
   sass:
     specifier: ^1.57.1
     version: 1.57.1
-  thumbhash:
-    specifier: ^0.1.1
-    version: 0.1.1
   vite:
     specifier: ^4.0.4
     version: 4.0.4(sass@1.57.1)
@@ -1195,10 +1192,6 @@ packages:
       fs-constants: 1.0.0
       inherits: 2.0.4
       readable-stream: 3.6.0
-    dev: false
-
-  /thumbhash@0.1.1:
-    resolution: {integrity: sha512-kH5pKeIIBPQXAOni2AiY/Cu/NKdkFREdpH+TLdM0g6WA7RriCv0kPLgP731ady67MhTAqrVG/4mnEeibVuCJcg==}
     dev: false
 
   /tiny-glob@0.2.9:

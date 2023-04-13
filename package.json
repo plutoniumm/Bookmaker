@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
+    "deploy": "rm -rf build && echo 'GITHUB AUTOBUILDS!'",
     "cd": "pnpm i --no-frozen-lockfile && vite build"
   },
   "devDependencies": {
@@ -18,7 +19,6 @@
     "predefined": "1.2.5",
     "rollup": "2.79.1",
     "sass": "^1.57.1",
-    "thumbhash": "^0.1.1",
     "vite": "^4.0.4",
     "vite-imagetools": "^4.0.17"
   }

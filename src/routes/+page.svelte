@@ -1,9 +1,5 @@
-<script>
-	export let data;
-</script>
-
 <section>
-	<h3>Idk what to say, there's some reading stuff ok? Its upto you</h3>
+	<h3>Reading List by Year</h3>
 	<br />
 	<div class="ƒ">
 		{#each [1, 2, 3] as round}
@@ -15,7 +11,14 @@
 			</a>
 		{/each}
 	</div>
-	<!-- <a href="/R2">R2</a> -->
+	<ul>
+		<li>
+			I am considering making a global search since it might be useful to look
+			for all books by a particular author or all books with a particular tag
+			across years.
+		</li>
+		<li>Also yes. I actually did not read anything till 2020.</li>
+	</ul>
 </section>
 
 <style lang="scss">
