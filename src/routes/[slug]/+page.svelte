@@ -26,14 +26,14 @@
 />
 
 <a href="#top" class="rx10 m5 p-fix fw7"> &uarr; </a>
-<h1 id="top" class="†c w-100">Round {round}</h1>
+<h1 id="top" class="tc w-100">Round {round}</h1>
 <input
     type="text"
     class="rpm-5 bgf"
     bind:value={search}
     placeholder="Search by Book/Auth..."
 />
-<div class="section mx-a w-100 ƒ ƒ∑ ∆-ar">
+<div class="section mx-a w-100 f fw j-ar">
     {#if !search.length}
         {#each data.books as book, index}
             <Book {book} {index} />

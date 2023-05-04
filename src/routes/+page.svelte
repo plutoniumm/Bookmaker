@@ -1,23 +1,20 @@
 <section>
 	<h3>Reading List by Year</h3>
 	<br />
-	<div class="ƒ">
+	<div class="f">
 		{#each [1, 2, 3] as round}
-			<a class="rpm-10 bgf ƒ-col" href={"/R" + round}>
-				<div class="p20 ƒ-col ∆-ct fw1 year">
+			<a class="rpm-10 bgf f-col" href={"/R" + round}>
+				<div class="p20 f-col j-ct fw1 year">
 					{2020 + round}
 				</div>
-				<div class="†c name p5">Round {round}</div>
+				<div class="tc name p5">Round {round}</div>
 			</a>
 		{/each}
 	</div>
 	<ul>
 		<li>
-			I am considering making a global search since it might be useful to look
-			for all books by a particular author or all books with a particular tag
-			across years.
+			I am considering making a global search by author or something like that.
 		</li>
-		<li>Also yes. I actually did not read anything till 2020.</li>
 	</ul>
 </section>
 

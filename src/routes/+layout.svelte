@@ -1,6 +1,6 @@
 <nav class="fade-down">
-	<section class="ƒ ∆-ct mx-a">
-		<div class="ƒ fw4 p5" style="font-size:1.5em;color:#444;">
+	<section class="f j-ct mx-a">
+		<div class="f fw4 p5" style="font-size:1.5em;color:#444;">
 			<a href="/">
 				<img height="24px" class="p-rel" src="/icons/if.svg" alt="Logo" />
 				iFactorial: The Bookmaker

@@ -7,7 +7,7 @@
   const { OLID, again, author, name, description, tags, cover } = book;
 </script>
 
-<div id={OLID} class="book bgf ƒ rpm-5 p-rel">
+<div id={OLID} class="book bgf f rpm-5 p-rel">
   <link rel="prefetch" href={img(cover)} />
   <View once let:intersecting top={400}>
     {#if intersecting}
@@ -20,12 +20,12 @@
       <img class="rx5" src="/icons/if.svg" alt={name} />
     {/if}
   </View>
-  <div class="w-100 ƒ-col ∆-bw">
+  <div class="w-100 f-col j-bw">
     <div>
       <span class="fw6">{index + 1}. {name} <i>- {author}</i></span> <br />
       <p>{description}</p>
     </div>
-    <div class="tags ƒ" style="justify-content:end">
+    <div class="tags f" style="justify-content:end">
       <Chip color="yellow" className="superHover" style="color:#222;">
         <a href={`https://www.amazon.com/s?k=${name} ${author}`}>Amzn</a>
       </Chip>
