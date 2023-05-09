@@ -7,13 +7,17 @@
 				<div class="p20 f-col j-ct fw1 year">
 					{2020 + round}
 				</div>
-				<div class="tc name p5">Round {round}</div>
+				<div class="tc name fw4 p5">Round {round}</div>
 			</a>
 		{/each}
 	</div>
 	<ul>
 		<li>
 			I am considering making a global search by author or something like that.
+		</li>
+		<li>
+			You should expect to see 100 books for 2021 (because lockdown) and 50 for
+			every year after that.
 		</li>
 	</ul>
 </section>

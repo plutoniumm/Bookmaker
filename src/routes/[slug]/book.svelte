@@ -7,7 +7,7 @@
   const { OLID, again, author, name, description, tags, cover } = book;
 </script>
 
-<div id={OLID} class="book bgf f rpm-5 p-rel">
+<a href="#{OLID}" id={OLID} class="book bgf f rpm-5 p-rel">
   <link rel="prefetch" href={img(cover)} />
   <View once let:intersecting top={400}>
     {#if intersecting}
@@ -25,6 +25,7 @@
       <span class="fw6">{index + 1}. {name} <i>- {author}</i></span> <br />
       <p>{description}</p>
     </div>
+    <!-- There just has to be a better way of doing this -->
     <div class="tags f" style="justify-content:end">
       <Chip color="yellow" className="superHover" style="color:#222;">
         <a href={`https://www.amazon.com/s?k=${name} ${author}`}>Amzn</a>
@@ -43,7 +44,7 @@
       {/if}
     </div>
   </div>
-</div>
+</a>
 
 <style lang="scss">
   i {
@@ -57,6 +58,7 @@
     object-fit: cover;
   }
   .book {
+    display: block;
     z-index: 1;
     width: calc(50% - 20px);
   }
