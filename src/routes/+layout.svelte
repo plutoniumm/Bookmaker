@@ -3,7 +3,7 @@
 		<div class="f fw4 p5" style="font-size:1.5em;color:#444;">
 			<a href="/">
 				<img height="24px" class="p-rel" src="/icons/if.svg" alt="Logo" />
-				iFactorial: The Bookmaker
+				Plutoniumm's Readings
 			</a>
 		</div>
 	</section>

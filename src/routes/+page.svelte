@@ -15,10 +15,7 @@
 		<li>
 			I am considering making a global search by author or something like that.
 		</li>
-		<li>
-			You should expect to see 100 books for 2021 (because lockdown) and 50 for
-			every year after that.
-		</li>
+		<li>Im gonna stop writing descriptions since 2023, because... internet</li>
 	</ul>
 </section>
 
@@ -31,6 +28,11 @@
 	}
 	.name {
 		height: calc(10px + 1em);
+	}
+	li {
+		line-height: 1.15em;
+		padding: 7px;
+		font-size: 1.12em;
 	}
 	a {
 		width: 300px;
