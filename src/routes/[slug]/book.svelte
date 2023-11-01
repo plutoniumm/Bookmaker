@@ -22,8 +22,8 @@
   </View>
   <div class="w-100 f-col j-bw">
     <div>
-      <span class="fw6">{index + 1}. {name} <i>- {author}</i></span> <br />
-      <p>{description}</p>
+      <span class="fw6">{name} <i>- {author}</i></span> <br />
+      <p class="fw4">{description}</p>
     </div>
     <!-- There just has to be a better way of doing this -->
     <div class="tags f" style="justify-content:end">
@@ -32,7 +32,7 @@
       </Chip>
 
       {#if tags === "®"}
-        <Chip color="green" text="Recommended" />
+        <Chip color="green" text="I Like" />
       {:else if tags.includes("MORE")}
         <Chip color="blue">
           <a href={tags.split("::")[1].trim()}>See More</a>
@@ -40,7 +40,7 @@
       {:else if tags != 0}{tags}{/if}
 
       {#if again.toLowerCase() === "yes"}
-        <Chip color="yellow" text="Dense" />
+        <Chip color="yellow" text="Info Heavy" />
       {/if}
     </div>
   </div>
