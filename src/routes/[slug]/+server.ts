@@ -1,22 +1,34 @@
-import R1 from '../data/R1.csv';
-import R2 from '../data/R2.csv';
-import R3 from '../data/R3.csv';
+import R1 from '../data/R1.csv?raw';
+import R2 from '../data/R2.csv?raw';
+import R3 from '../data/R3.csv?raw';
 
-import { json } from '@sveltejs/kit';
+import { csvParse } from 'd3-dsv';
+import { json, text } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 
 export const GET: RequestHandler = async ({ params }) => {
   const maps = { R1, R2, R3 }
 
-  params.slug = params.slug.replace('.json', '');
-  const books = maps[params.slug];
+  // json, csv or default:json
+  const isCsv = params.slug.endsWith('.csv');
 
-  if (books) {
-    return json(books);
+  if (isCsv) {
+    params.slug = params.slug.slice(0, -4);
+    const book = maps[params.slug];
+    if (book) {
+      return text(book);
+    } else {
+      return text("Not found", { status: 404 });
+    }
   } else {
-    return json({ error: "Not found" }, 404);
+    params.slug = params.slug.replace('.json', '');
+    let books = maps[params.slug];
+
+    if (books) {
+      books = csvParse(books);
+      return json(books);
+    } else {
+      return json({ error: "Not found" }, { status: 404 });
+    }
   }
 };
-
-// EX: https://openlibrary.org/api/books?bibkeys=OLID:OL1429049M&format=json
-// it is possible to chain bibkeys
