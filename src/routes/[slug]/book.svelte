@@ -15,9 +15,17 @@
         class="rx5"
         src={cover !== 0 ? img(cover) : "/icons/if.svg"}
         alt={name}
+        loading="lazy"
+        decoding="async"
       />
     {:else}
-      <img class="rx5" src="/icons/if.svg" alt={name} />
+      <img
+        class="rx5"
+        src="/icons/if.svg"
+        alt={name}
+        loading="lazy"
+        decoding="async"
+      />
     {/if}
   </View>
   <div class="w-100 f-col j-bw">

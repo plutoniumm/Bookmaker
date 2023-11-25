@@ -4,12 +4,21 @@ import R3 from '../data/R3.csv';
 
 export const load = async ( { params } ) => {
   const maps = { R1, R2, R3 }
-  return {
-    books: maps[ params.slug ],
-    meta: {
-      index: params.slug.match( /\d/g ).join( "" ), //Extract number
+  // const isJson = params.slug.match( /\.json$/ );
+
+  const books = maps[ params.slug ];
+  if ( books ) {
+    return {
+      books,
+      meta: {
+        index: params.slug.match( /\d/g ).join( "" ), //Extract number
+      }
     }
-  };
+  } else {
+    return {
+      status: 404,
+    };
+  }
 };
 
 // EX: https://openlibrary.org/api/books?bibkeys=OLID:OL1429049M&format=json
