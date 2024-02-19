@@ -1,6 +1,7 @@
 <script>
     import Book from "./book.svelte";
     import Fuse from "fuse.js";
+    import { START_YR } from "../data/conf";
 
     export let data;
 
@@ -22,7 +23,7 @@
 <meta name="title" content="Round {round}" />
 <meta
     name="description"
-    content={`List of readings in the year ${2020 + round}`}
+    content={`List of readings in the year ${START_YR + round}`}
 />
 
 <a href="#top" class="rx10 m5 p-fix fw7"> &uarr; </a>
