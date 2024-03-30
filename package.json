@@ -10,7 +10,10 @@
   "devDependencies": {
     "@rollup/plugin-dsv": "2.0.3",
     "svelte": "3.58.0",
-    "svelte-preprocess": "4.10.7"
+    "svelte-preprocess": "4.10.7",
+    "epub": "christianroy/epub",
+    "html-to-text": "^3.1.0",
+    "node-html-parser": "1.1.15"
   },
   "dependencies": {
     "@sveltejs/adapter-static": "^1.0.5",

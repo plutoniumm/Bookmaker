@@ -7,5 +7,15 @@ node_modules
 .env*
 .vercel
 .output
+local/
+build
+epub2txt
+*.o
+*.epub
+
+.DS_Store
+**/.DS_Store
+node_modules/
+text/
 
 auto-imports*
