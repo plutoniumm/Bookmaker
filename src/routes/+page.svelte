@@ -11,7 +11,7 @@
 	<br />
 	<div class="f">
 		{#each files as round, index}
-			<a class="rpm-10 bgf f-col" href={"/R" + round}>
+			<a class="rpm-10 f-col" href={"/R" + round} style="background: #fff;">
 				<div class="p20 f-col j-ct fw1 year">
 					{START_YR + index}
 				</div>

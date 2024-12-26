@@ -30,7 +30,7 @@
 <h1 id="top" class="tc w-100">Round {round}</h1>
 <input
     type="text"
-    class="rpm-5 bgf"
+    class="rx10 p10 m5"
     bind:value={search}
     placeholder="Search by Book/Auth..."
 />
@@ -59,7 +59,8 @@
         z-index: 33;
     }
     input {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
+        background: #fff4;
         width: calc(100% - 20px);
     }
 </style>
