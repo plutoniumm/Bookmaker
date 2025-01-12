@@ -6,60 +6,12 @@
 5. Put R1 back into src/routes/books
 */
 
-import { appendFileSync } from "fs";
+import { appendFileSync, readFileSync } from "fs";
+import { csvParse } from "d3-dsv";
 
-const ids = Object.freeze( [
-    "OL83715W",
-    "OL8305185W",
-    "OL8062007W",
-    "OL7927002M",
-    "OL7318016M",
-    "OL54610936M",
-    "OL52209904M",
-    "OL51149627M",
-    "OL46535432M",
-    "OL4288870W",
-    "OL36675855M",
-    "OL35996435M",
-    "OL34534882W",
-    "OL33857307M",
-    "OL32754021M",
-    "OL32387462M",
-    "OL30809615W",
-    "OL29506523M",
-    "OL28635528M",
-    "OL28623980W",
-    "OL28321311M",
-    "OL27846773W",
-    "OL27810387W",
-    "OL278022W",
-    "OL27343095M",
-    "OL27275984W",
-    "OL27157451M",
-    "OL25807247W",
-    "OL25328015W",
-    "OL24340933W",
-    "OL24207868M",
-    "OL24149728W",
-    "OL22089096W",
-    "OL21209060W",
-    "OL20843696W",
-    "OL20787306W",
-    "OL20537401W",
-    "OL20334242W",
-    "OL20153626W",
-    "OL20046006W",
-    "OL1968368W",
-    "OL19663289W",
-    "OL18821160W",
-    "OL18201749W",
-    "OL17715915W",
-    "OL17551552W",
-    "OL1751051W",
-    "OL17043758W",
-    "OL16568840W",
-    "OL15540668W"
-] );
+const file = "./R4.csv";
+let ids = csvParse( readFileSync( file, "utf-8" ) );
+ids = Object.freeze( ids.map( e => e.OLID ) );
 
 const openlib = ( id ) => ( `https://openlibrary.org/works/${ id }.json` )
 
@@ -88,7 +40,8 @@ const map = ( i, data ) => {
 };
 
 
-appendFileSync( "./R3Imgs.csv", `OLID;title;coverId\n` );
+const file2 = file.replace( ".csv", "Imgs.csv" );
+appendFileSync( file2, `OLID;title;coverId\n` );
 ids.slice( 0, 101 ).forEach( async ( e, i ) => {
     const data = await gen.next();
     const c = map( i, data.value );
@@ -96,5 +49,5 @@ ids.slice( 0, 101 ).forEach( async ( e, i ) => {
 
     if ( c.cover === null ) appendFileSync( "./errors.txt", c.id + '\n' );
     const logged = `${ c.id };${ c.title };${ c.cover }\n`;
-    appendFileSync( "./R3Imgs.csv", logged );
+    appendFileSync( file2, logged );
 } );
