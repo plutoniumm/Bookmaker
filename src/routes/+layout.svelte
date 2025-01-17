@@ -30,6 +30,6 @@
 	}
 	main {
 		max-width: 1040px;
-		margin: 3rem auto;
+		margin: 2rem auto;
 	}
 </style>

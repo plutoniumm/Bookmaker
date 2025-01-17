@@ -4,8 +4,8 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "deploy": "rm -rf build && echo 'GITHUB AUTOBUILDS!'",
-    "cd": "pnpm i --no-frozen-lockfile && vite build"
+    "gen": "cd images && python3 build.py",
+    "deploy": "gh-pages -d build -t true"
   },
   "devDependencies": {
     "@rollup/plugin-dsv": "2.0.3",

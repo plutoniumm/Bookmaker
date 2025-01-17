@@ -17,6 +17,7 @@
     let search = "";
 
     const round = data.meta.index;
+    const notes = data.meta.notes;
 </script>
 
 <title>Round {round} | i!</title>
@@ -28,6 +29,9 @@
 
 <a href="#top" class="rx10 m5 p-fix fw7"> &uarr; </a>
 <h1 id="top" class="tc w-100">Round {round}</h1>
+<div class="tc w-100">
+    <p>{notes}</p>
+</div>
 <input
     type="text"
     class="rx10 p10 m5"
